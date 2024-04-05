@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header__container">
+    <div class="header__col-left d-mobile-none">
+      <a href="#" class="link header__link caption">
+        В магазин
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M8.45875 7.08031L16.9807 7.08019M16.9807 7.08019L16.9807 15.481M16.9807 7.08019L7.08125 16.9797"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+      </a>
+
+      <div class="header__links d-tablet-none">
+        <a href="news.html" class="header__link caption link">Новости и акции</a>
+        <a href="shops.html" class="header__link caption link">Где купить</a>
+      </div>
+    </div>
+    <div class="header__col-medium">
+      <a href="index.html" class="header__logo main-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="158" height="63" viewBox="0 0 158 63" fill="none">
+          <path d="M47.2668 0.0308113C41.9259 0.0308113 36.5879 0.00598405 31.2484 0.0132862C26.4615 0.0191279 21.487 -0.234987 16.8818 1.30577C12.5297 2.74137 8.56873 5.34531 5.61108 8.86787C4.44926 10.2524 3.44302 11.7683 2.62581 13.3821C1.84786 14.917 1.23132 16.5337 0.792185 18.1986C-0.490335 23.0705 -0.19806 28.2361 1.52796 32.9591C2.07761 34.4634 2.75959 35.9209 3.56661 37.3039C4.62084 39.1119 5.91935 40.7783 7.42144 42.2343C10.7004 45.4137 15.0279 47.6393 19.5138 48.4484C19.5908 48.463 19.6694 48.4762 19.7464 48.4893C22.2155 48.9026 24.8067 48.8018 27.3005 48.7902C30.2494 48.7756 33.2042 48.7887 36.1458 48.8077C37.0721 48.8135 47.2682 48.8705 47.2682 48.8822C47.2682 45.7189 47.2682 42.5541 47.2682 39.3908C47.2682 39.4493 36.0542 39.4098 35.1846 39.4084C32.1485 39.4084 29.1123 39.3952 26.0761 39.3879C24.3937 39.385 22.7782 39.3981 21.122 39.0725C20.4866 38.9483 19.8598 38.7848 19.2462 38.5774C15.3957 37.2732 12.2098 34.1304 10.7208 30.3464C10.6786 30.2413 10.2817 28.94 10.2453 28.94C22.5572 28.9692 34.8691 28.9984 47.181 29.0276C47.2101 25.8921 47.2392 22.758 47.2682 19.6225C34.8691 19.6517 22.4714 19.6809 10.0723 19.7101C10.1261 19.7101 10.8677 17.7502 10.9462 17.5954C11.4609 16.5775 12.0862 15.6004 12.8249 14.73C14.2296 13.0754 15.9788 11.7099 17.9433 10.7913C18.8245 10.3794 19.7479 10.0567 20.6974 9.84198C22.6357 9.40239 24.6438 9.39946 26.6316 9.398C31.9493 9.398 37.264 9.3834 42.5817 9.36295C44.1448 9.35711 45.7065 9.35127 47.2697 9.34543C47.2697 6.2391 47.2697 3.13422 47.2697 0.0278905L47.2668 0.0308113Z"
+                fill="white" />
+          <path d="M54.03 0.0731142C57.2377 0.102323 60.4455 0.131531 63.6547 0.16074C63.6692 7.1854 63.6838 14.2101 63.6983 21.2347C70.3087 14.1663 76.9205 7.09778 83.5323 0.0307617C87.0149 0.045366 90.4974 0.0599703 93.98 0.0745746C88.7772 6.18501 83.5759 12.2954 78.3731 18.4059C78.5607 18.1868 80.0526 18.4526 80.3056 18.4789C81.4587 18.6016 82.6002 18.8572 83.6951 19.2427C86.4797 20.2241 88.8732 22.073 90.5687 24.4944C91.8919 26.3842 92.651 28.5968 92.904 30.8882C93.1861 33.4454 92.984 36.0508 92.984 38.6168C92.984 39.4784 92.984 48.9493 92.984 48.9493C89.6962 48.9493 86.4085 48.9493 83.1208 48.9493C82.9841 48.8354 83.1193 47.7182 83.1193 47.5487C83.1193 43.9984 83.2647 40.4496 83.2342 36.8993C83.2095 33.9711 83.4988 30.6618 81.5532 28.2492C79.6425 25.8818 76.4595 24.9092 73.5397 24.674C71.1724 24.4842 68.6161 25.0435 66.621 26.3608C65.6599 26.9961 64.6842 27.9147 64.2218 28.9852C63.6009 30.4208 63.6532 32.1325 63.6619 33.663C63.6896 38.5204 63.6983 43.3748 63.6983 48.2308V48.9902H53.9878C54.0023 32.6845 54.0169 16.3788 54.0314 0.0716537L54.03 0.0731142Z"
+                fill="white" />
+          <path d="M141.472 0.116881H119.86C116.537 0.116881 113.129 -0.110946 109.816 0.116881C107.023 0.309658 104.271 1.36117 102.118 3.1721C101.626 3.58686 101.165 4.04252 100.744 4.53176C98.7493 6.8626 97.6878 9.92659 97.554 12.9979C97.301 18.8191 99.9926 25.1121 105.556 27.516C108.099 28.6142 110.936 28.8114 113.703 28.7632C117.82 28.6931 121.934 28.6084 126.052 28.5631C127.192 28.55 128.352 28.5398 129.447 28.861C130.886 29.2817 131.955 30.3419 132.448 31.7585C133.318 34.2632 131.996 37.2717 129.594 38.3626C128.401 38.903 127.068 38.9497 125.783 38.8752C124.501 38.8022 123.238 38.8431 121.95 38.8431C118.343 38.8416 114.736 38.8431 111.13 38.8445C109.578 38.8445 108.028 38.8445 106.476 38.8445H97.4014V49.0121H127.923C129.288 48.9054 133.073 48.4323 136.636 45.507C138.801 43.7297 140.53 41.3623 141.404 38.6824C142.391 35.6564 142.111 32.1003 141.301 29.0567C140.481 25.9767 138.763 23.1508 136.072 21.3851C133.447 19.6633 130.257 19.0148 127.181 18.7549C123.622 18.454 119.936 18.6439 116.366 18.7169C115.249 18.7403 114.131 18.7709 113.014 18.8118C111.958 18.8498 110.878 18.8907 109.873 18.565C108.537 18.1313 107.436 17.0243 107.004 15.6807C106.378 13.7325 107.19 11.4352 109.06 10.521C110.131 9.99815 111.339 10.0989 112.498 10.0726C113.788 10.0434 115.077 10.023 116.367 10.0098C120.871 9.96456 125.372 10.042 129.876 10.042C130.84 10.042 141.446 10.0463 141.446 10.042C141.453 6.73263 141.461 3.42329 141.468 0.113961L141.472 0.116881Z"
+                fill="white" />
+          <path d="M147.856 0.138672H158V48.8615H147.821C147.833 32.6201 147.845 16.3801 147.855 0.138672H147.856Z"
+                fill="white" />
+          <path d="M153.448 63.0002C155.962 63.0002 158 60.9536 158 58.4291C158 55.9045 155.962 53.8579 153.448 53.8579C150.935 53.8579 148.897 55.9045 148.897 58.4291C148.897 60.9536 150.935 63.0002 153.448 63.0002Z"
+                fill="white" />
+          <path d="M141.027 63.0002C143.541 63.0002 145.579 60.9536 145.579 58.4291C145.579 55.9045 143.541 53.8579 141.027 53.8579C138.514 53.8579 136.476 55.9045 136.476 58.4291C136.476 60.9536 138.514 63.0002 141.027 63.0002Z"
+                fill="white" />
+          <path d="M128.607 63.0002C131.12 63.0002 133.158 60.9536 133.158 58.4291C133.158 55.9045 131.12 53.8579 128.607 53.8579C126.093 53.8579 124.055 55.9045 124.055 58.4291C124.055 60.9536 126.093 63.0002 128.607 63.0002Z"
+                fill="white" />
+        </svg>
+      </a>
+
+      <nav class="header__nav d-mobile-none">
+        <a href="#" class="header__link text-s-regular link">Посуда</a>
+        <a href="catalog.html" class="header__link text-s-regular link">Оборудование</a>
+        <a href="#" class="header__link text-s-regular link">О бренде</a>
+      </nav>
+    </div>
+    <div class="header__col-right">
+      <div class="header__buttons-group">
+        <button class="btn-reset header__search-button" data-open-search-layout>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.4401 4.6001C7.66247 4.6001 4.6001 7.66247 4.6001 11.4401C4.6001 15.2177 7.66247 18.2801 11.4401 18.2801C13.3027 18.2801 14.9914 17.5356 16.2249 16.328C16.2265 16.3264 16.2282 16.3247 16.2299 16.3231C17.4952 15.0818 18.2801 13.3526 18.2801 11.4401C18.2801 7.66247 15.2177 4.6001 11.4401 4.6001ZM18.3178 16.9942C19.5451 15.4764 20.2801 13.5441 20.2801 11.4401C20.2801 6.5579 16.3223 2.6001 11.4401 2.6001C6.5579 2.6001 2.6001 6.5579 2.6001 11.4401C2.6001 16.3223 6.5579 20.2801 11.4401 20.2801C13.4975 20.2801 15.3908 19.5772 16.8929 18.3985L19.7048 21.1188C20.1017 21.5028 20.7348 21.4923 21.1188 21.0954C21.5028 20.6985 21.4923 20.0654 21.0954 19.6814L18.3178 16.9942Z"
+                  fill="white" />
+          </svg>
+
+          <span class="caption d-mobile-none">Поиск</span>
+        </button>
+        <button class="header__burger btn-reset" aria-label="Open menu" data-menu-button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3 6C3 5.44772 3.44772 5 4 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6ZM3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12ZM3 18C3 17.4477 3.44772 17 4 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z"
+                  fill="white" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="side-menu" data-menu>
+      <div class="side-menu__top space-lg">
+        <p class="heading-l">Меню</p>
+        <button class="btn-reset side-menu__close" data-menu-close>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="side-menu__level-0 d-none" data-level-0>
+        <div class="side-menu__mob-wrapper">
+          <ul class="side-menu__mob-list space-lg">
+            <li>
+              <a href="category.html" class="heading-s text-dark">Каталог</a>
+            </li>
+            <li>
+              <a href="news.html" class="heading-s text-dark">Новости и акции</a>
+            </li>
+            <li>
+              <a href="shops.html" class="heading-s text-dark">Где купить</a>
+            </li>
+            <li>
+              <a href="#" class="heading-s text-dark">О бренде</a>
+            </li>
+          </ul>
+
+          <div class="side-menu__mob-bottom-actions">
+            <button class="btn-reset caption text-dark">Получить консультацию</button>
+            <a href="#" class="link caption text-dark">
+              В магазин
+              <img src="./img/icons/lupa-mob.svg" alt="В магазин">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="side-menu__level-1" data-level-1>
+
+        <div class="side-menu__wrapper">
+          <div class="side-menu__group">
+            <p class="heading-s space-sm">Оборудование</p>
+
+            <ul class="side-menu__list" data-menu-list>
+              <li class="side-menu__item">
+                <a class="side-menu__link" data-menu-id="1">
+                  <img src="" alt="">
+                  <span class="text-s-regular text-dark">Тепловое</span>
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a class="side-menu__link" data-menu-id="2">
+                  <img src="" alt="">
+                  <span class="text-s-regular text-dark">Упаковочное</span>
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a class="side-menu__link" data-menu-id="3">
+                  <img src="" alt="">
+                  <span class="text-s-regular text-dark">Хлебопекарное и кондитерское</span>
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a class="side-menu__link" data-menu-id="4">
+                  <img src="" alt="">
+                  <span class="text-s-regular text-dark">Электромеханическое</span>
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a class="side-menu__link" data-menu-id="5">
+                  <img src="" alt="">
+                  <span class="text-s-regular text-dark">Холодильное</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="side-menu__group">
+            <p class="heading-s space-sm">Посуда, емкости, инвентарь</p>
+
+            <ul class="side-menu__list" data-menu-list>
+              <li class="side-menu__item">
+                <a class="side-menu__link" data-menu-id="6">
+                  <img src="" alt="">
+                  <span class="text-s-regular text-dark">Наплитная посуда</span>
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a class="side-menu__link" data-menu-id="7">
+                  <img src="" alt="">
+                  <span class="text-s-regular text-dark">Гастроемкости</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div id="1" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+        <div class="side-menu__group">
+          <p class="heading-s space-sm">Тепловое Оборудование 11 </p>
+          <ul class="side-menu__list">
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Наплитная посуда</span>
+              </a>
+            </li>
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Гастроемкости</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button data-close-level-2 class="btn-reset button-texted text-accent text-s-semi-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6.9523 5.29995L2.39844 9.91544M2.39844 9.91544L6.9523 14.5309M2.39844 9.91544L17.5984 9.91544C19.8076 9.91544 21.5984 11.7063 21.5984 13.9154L21.5984 15.7C21.5984 17.9091 19.8076 19.7 17.5984 19.7L11.9984 19.7"
+                  stroke="#6667AB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+          </svg>
+          Назад
+        </button>
+      </div>
+      <div id="2" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+        <div class="side-menu__group">
+          <p class="heading-s space-sm">Тепловое Оборудование2</p>
+          <ul class="side-menu__list">
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Наплитная посуда</span>
+              </a>
+            </li>
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Гастроемкости</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button data-close-level-2 class="btn-reset button-texted text-accent text-s-semi-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6.9523 5.29995L2.39844 9.91544M2.39844 9.91544L6.9523 14.5309M2.39844 9.91544L17.5984 9.91544C19.8076 9.91544 21.5984 11.7063 21.5984 13.9154L21.5984 15.7C21.5984 17.9091 19.8076 19.7 17.5984 19.7L11.9984 19.7"
+                  stroke="#6667AB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+          </svg>
+          Назад
+        </button>
+      </div>
+      <div id="3" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+        <div class="side-menu__group">
+          <p class="heading-s space-sm">Тепловое Оборудование 3</p>
+          <ul class="side-menu__list">
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Наплитная посуда</span>
+              </a>
+            </li>
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Гастроемкости</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button data-close-level-2 class="btn-reset button-texted text-accent text-s-semi-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6.9523 5.29995L2.39844 9.91544M2.39844 9.91544L6.9523 14.5309M2.39844 9.91544L17.5984 9.91544C19.8076 9.91544 21.5984 11.7063 21.5984 13.9154L21.5984 15.7C21.5984 17.9091 19.8076 19.7 17.5984 19.7L11.9984 19.7"
+                  stroke="#6667AB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+          </svg>
+          Назад
+        </button>
+      </div>
+      <div id="4" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+        <div class="side-menu__group">
+          <p class="heading-s space-sm">Тепловое Оборудование 4</p>
+          <ul class="side-menu__list">
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Наплитная посуда</span>
+              </a>
+            </li>
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Гастроемкости</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button data-close-level-2 class="btn-reset button-texted text-accent text-s-semi-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6.9523 5.29995L2.39844 9.91544M2.39844 9.91544L6.9523 14.5309M2.39844 9.91544L17.5984 9.91544C19.8076 9.91544 21.5984 11.7063 21.5984 13.9154L21.5984 15.7C21.5984 17.9091 19.8076 19.7 17.5984 19.7L11.9984 19.7"
+                  stroke="#6667AB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+          </svg>
+          Назад
+        </button>
+      </div>
+      <div id="5" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+        <div class="side-menu__group">
+          <p class="heading-s space-sm">Тепловое Оборудование 5</p>
+          <ul class="side-menu__list">
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Наплитная посуда</span>
+              </a>
+            </li>
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Гастроемкости</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button data-close-level-2 class="btn-reset button-texted text-accent text-s-semi-bold text-s-semi-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6.9523 5.29995L2.39844 9.91544M2.39844 9.91544L6.9523 14.5309M2.39844 9.91544L17.5984 9.91544C19.8076 9.91544 21.5984 11.7063 21.5984 13.9154L21.5984 15.7C21.5984 17.9091 19.8076 19.7 17.5984 19.7L11.9984 19.7"
+                  stroke="#6667AB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+          </svg>
+          Назад
+        </button>
+      </div>
+      <div id="6" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+        <div class="side-menu__group">
+          <p class="heading-s space-sm">Тепловое Оборудование</p>
+          <ul class="side-menu__list">
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Наплитная посуда</span>
+              </a>
+            </li>
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Гастроемкости</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button data-close-level-2 class="btn-reset button-texted text-accent text-s-semi-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6.9523 5.29995L2.39844 9.91544M2.39844 9.91544L6.9523 14.5309M2.39844 9.91544L17.5984 9.91544C19.8076 9.91544 21.5984 11.7063 21.5984 13.9154L21.5984 15.7C21.5984 17.9091 19.8076 19.7 17.5984 19.7L11.9984 19.7"
+                  stroke="#6667AB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+          </svg>
+          Назад
+        </button>
+      </div>
+      <div id="7" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+        <div class="side-menu__group">
+          <p class="heading-s space-sm">Тепловое Оборудование</p>
+          <ul class="side-menu__list">
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Наплитная посуда</span>
+              </a>
+            </li>
+            <li class="side-menu__item">
+              <a href="" class="side-menu__link">
+                <img src="" alt="">
+                <span class="text-s-regular text-dark">Гастроемкости</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button data-close-level-2 class="btn-reset button-texted text-accent text-s-semi-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6.9523 5.29995L2.39844 9.91544M2.39844 9.91544L6.9523 14.5309M2.39844 9.91544L17.5984 9.91544C19.8076 9.91544 21.5984 11.7063 21.5984 13.9154L21.5984 15.7C21.5984 17.9091 19.8076 19.7 17.5984 19.7L11.9984 19.7"
+                  stroke="#6667AB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+          </svg>
+          Назад
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="header__search-layout search-layout" data-search-layout>
+    <div class="container">
+      <div class="search-layout__top space-xl">
+        <h3 class="heading-m">найдем всё</h3>
+        <button class="btn-reset search-layout__close" data-search-layout-close>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
+      <form action="">
+        <div class="search-layout__form-group">
+          <input class="regular-input text-m-regular search-layout__input" type="search" placeholder="Введите запрос">
+          <button class="btn-reset search-layout__search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <path fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.4416 5.09961C7.66393 5.09961 4.60156 8.16198 4.60156 11.9396C4.60156 15.7172 7.66393 18.7796 11.4416 18.7796C13.3042 18.7796 14.9929 18.0351 16.2263 16.8275C16.228 16.8259 16.2297 16.8242 16.2313 16.8226C17.4966 15.5813 18.2816 13.8521 18.2816 11.9396C18.2816 8.16198 15.2192 5.09961 11.4416 5.09961ZM18.3192 17.4937C19.5465 15.9759 20.2816 14.0436 20.2816 11.9396C20.2816 7.05741 16.3238 3.09961 11.4416 3.09961C6.55937 3.09961 2.60156 7.05741 2.60156 11.9396C2.60156 16.8218 6.55937 20.7796 11.4416 20.7796C13.499 20.7796 15.3923 20.0767 16.8944 18.898L19.7063 21.6183C20.1032 22.0023 20.7363 21.9918 21.1203 21.5949C21.5043 21.198 21.4938 20.5649 21.0969 20.1809L18.3192 17.4937Z"
+                    fill="#222222" />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>
+<main class="page-wrapper shops">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a href="/" class="breadcrumbs__link caption link">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link caption breadcrumbs__link_active">Где купить</a>
+      </li>
+    </ul>
+    <div class="heading-wrap">
+      <h1 class="heading-l heading-width">где купить</h1>
+    </div>
+
+    <div class="shops__blocks">
+      <div class="shops__block">
+        <h2 class="heading-m">Дилеры</h2>
+
+        <div class="shops__items">
+          <div class="shop-card bg-light-secondary">
+            <div class="shop-card__logo-wrap">
+              <img src="./img/logos-shop/td.svg" alt="">
+            </div>
+
+            <div class="shop-card__middle">
+              <h3 class="heading-xs text-dark">Торговый дизайн</h3>
+              <p class="product-card__price text-s-regular text-dark">Генеральный дистрибьютор на территории РФ</p>
+            </div>
+
+            <div class="shop-card__bottom">
+              <div class="shop-card__group">
+                <span class="text-m-regular">Контакты</span>
+                <a href="tel:+74953747060" class="text-s-semi-bold text-dark link">+7 (495) 374 70 60</a>
+              </div>
+              <a href="#" class="shop-card__action text-dark link">
+                Сайт
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <path d="M8.45875 7.58031L16.9807 7.58019M16.9807 7.58019L16.9807 15.981M16.9807 7.58019L7.08125 17.4797"
+                        stroke="#222222"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shops__block">
+        <h2 class="heading-m">Интернет-магазины</h2>
+
+        <div class="shops__items">
+          <div class="shop-card bg-light-secondary">
+            <div class="shop-card__logo-wrap">
+              <img src="./img/logos-shop/wlbake.svg" alt="">
+            </div>
+
+            <div class="shop-card__middle">
+              <h3 class="heading-xs text-dark">WLBake.PRO</h3>
+              <p class="product-card__price text-s-regular text-dark">Магазин WLBake.PRO - официальный дилер оборудования WLBake</p>
+            </div>
+
+            <div class="shop-card__bottom">
+              <div class="shop-card__group">
+                <span class="text-m-regular">Контакты</span>
+                <a href="tel:+74953747060" class="text-s-semi-bold text-dark link">+7 (495) 374 70 60</a>
+              </div>
+              <a href="#" class="shop-card__action text-dark link">
+                Сайт
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <path d="M8.45875 7.58031L16.9807 7.58019M16.9807 7.58019L16.9807 15.981M16.9807 7.58019L7.08125 17.4797"
+                        stroke="#222222"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="shop-card bg-light-secondary">
+            <div class="shop-card__logo-wrap">
+              <img src="./img/logos-shop/buisness-ru.svg" alt="">
+            </div>
+
+            <div class="shop-card__middle">
+              <h3 class="heading-xs text-dark">PRO-Biznes</h3>
+              <p class="product-card__price text-s-regular text-dark">PRO-Бизнес.ру — интернет-магазин для профессионалов своего дела!</p>
+            </div>
+
+            <div class="shop-card__bottom">
+              <div class="shop-card__group">
+                <span class="text-m-regular">Контакты</span>
+                <a href="tel:+74953747060" class="text-s-semi-bold text-dark link">+7 (495) 374 70 60</a>
+              </div>
+              <a href="#" class="shop-card__action text-dark link">
+                Сайт
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <path d="M8.45875 7.58031L16.9807 7.58019M16.9807 7.58019L16.9807 15.981M16.9807 7.58019L7.08125 17.4797"
+                        stroke="#222222"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="shop-card bg-light-secondary">
+            <div class="shop-card__logo-wrap">
+              <img src="./img/logos-shop/entero.svg" alt="">
+            </div>
+
+            <div class="shop-card__middle">
+              <h3 class="heading-xs text-dark">Entero</h3>
+              <p class="product-card__price text-s-regular text-dark">ENTERO. От идеи до открытия.</p>
+            </div>
+
+            <div class="shop-card__bottom">
+              <div class="shop-card__group">
+                <span class="text-m-regular">Контакты</span>
+                <a href="tel:+74953747060" class="text-s-semi-bold text-dark link">+7 (495) 374 70 60</a>
+              </div>
+              <a href="#" class="shop-card__action text-dark link">
+                Сайт
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <path d="M8.45875 7.58031L16.9807 7.58019M16.9807 7.58019L16.9807 15.981M16.9807 7.58019L7.08125 17.4797"
+                        stroke="#222222"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="shop-card bg-light-secondary">
+            <div class="shop-card__logo-wrap">
+              <img src="./img/logos-shop/refro.svg" alt="">
+            </div>
+
+            <div class="shop-card__middle">
+              <h3 class="heading-xs text-dark">Refro</h3>
+              <p class="product-card__price text-s-regular text-dark">Оборудование для магазинов и ресторанов</p>
+            </div>
+
+            <div class="shop-card__bottom">
+              <div class="shop-card__group">
+                <span class="text-m-regular">Контакты</span>
+                <a href="tel:+74953747060" class="text-s-semi-bold text-dark link">+7 (495) 374 70 60</a>
+              </div>
+              <a href="#" class="shop-card__action text-dark link">
+                Сайт
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <path d="M8.45875 7.58031L16.9807 7.58019M16.9807 7.58019L16.9807 15.981M16.9807 7.58019L7.08125 17.4797"
+                        stroke="#222222"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+<footer class="footer bg-dark">
+  <div class="container">
+    <div class="footer__content">
+      <div class="footer__top space-xl">
+        <div class="footer__links-group">
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="text-s-regular text-light">Посуда</a>
+            </li>
+            <li>
+              <a href="catalog.html" class="text-s-regular text-light">Оборудование</a>
+            </li>
+            <li>
+              <a href="#" class="text-s-regular text-light">О бренде</a>
+            </li>
+            <li>
+              <a href="#" class="text-s-regular text-light">В магазин</a>
+            </li>
+          </ul>
+
+          <ul class="footer__links">
+            <li>
+              <a href="news.html" class="text-s-regular text-light">Новости и акции</a>
+            </li>
+            <li>
+              <a href="shops.html" class="text-s-regular text-light">Где купить</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__action">
+          <button class="btn-reset text-l-bold button-outlined bg-dark text-light footer__action-button">подписаться на рассылку</button>
+          <button class="text-l-bold button-filled text-dark footer__action-button">консультация</button>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <a href="#" class="text-secondary-2 caption">Политика конфиденциальности</a>
+        <p class="footer__copyright text-secondary-2 caption">© 2023 Все права защищены</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
