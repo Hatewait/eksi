@@ -12,9 +12,6 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css">
-
-
-
   <script type="text/javascript" src="./js/libs/accordion/accordion.js"></script>
 <body>
 <header class="header">
@@ -32,7 +29,7 @@
       </a>
 
       <div class="header__links d-tablet-none">
-        <a href="news.html" class="header__link caption link">Новости и акции</a>
+        <a href="article-list.html" class="header__link caption link">Новости и акции</a>
         <a href="shops.html" class="header__link caption link">Где купить</a>
       </div>
     </div>
@@ -103,7 +100,7 @@
               <a href="category.html" class="heading-s text-dark">Каталог</a>
             </li>
             <li>
-              <a href="news.html" class="heading-s text-dark">Новости и акции</a>
+              <a href="article-list.html" class="heading-s text-dark">Новости и акции</a>
             </li>
             <li>
               <a href="shops.html" class="heading-s text-dark">Где купить</a>
@@ -419,7 +416,7 @@
     </div>
   </div>
 </header>
-<main class="page-wrapper category category_result">
+<main class="page-wrapper">
   <div class="container">
     <ul class="breadcrumbs">
       <li class="breadcrumbs__item">
@@ -430,218 +427,220 @@
       </li>
     </ul>
 
-    <div class="heading-wrap">
-      <h1 class="heading-l heading-width">Результаты поиска</h1>
-      <p class="text-s-regular">Поиск по запросу <span>“вафельница”</span></p>
-    </div>
-    <div class="category__top category__top_result space-sm">
-      <span class="caption">Найдено <span>14</span> товаров</span>
+    <div class="category category_result">
+      <div class="heading-wrap">
+        <h1 class="heading-l heading-width">Результаты поиска</h1>
+        <p class="text-s-regular">Поиск по запросу <span>“вафельница”</span></p>
+      </div>
+      <div class="category__top category__top_result space-sm">
+        <span class="caption">Найдено <span>14</span> товаров</span>
 
-      <div class="category__top-group">
-        <div class="category__sort-block" data-sort-block="">
-          <div class="category__sort-dropdown dropdown-sort" data-dropdown="">
-            <input type="text" placeholder="дешевле" readonly="" data-sort-input="">
+        <div class="category__top-group">
+          <div class="category__sort-block" data-sort-block="">
+            <div class="category__sort-dropdown dropdown-sort" data-dropdown="">
+              <input type="text" placeholder="дешевле" readonly="" data-sort-input="">
 
-            <ul class="options">
-              <li class="option" data-sort-option="">По популярности</li>
-              <li class="option" data-sort-option="">дороже</li>
-              <li class="option" data-sort-option="">популярности</li>
-              <li class="option" data-sort-option="">алфавиту</li>
-            </ul>
+              <ul class="options">
+                <li class="option" data-sort-option="">По популярности</li>
+                <li class="option" data-sort-option="">дороже</li>
+                <li class="option" data-sort-option="">популярности</li>
+                <li class="option" data-sort-option="">алфавиту</li>
+              </ul>
+
+            </div>
 
           </div>
+          <ul class="category__template-list d-tablet-none">
+            <li class="category__template-item">
+              <button class="btn-reset category__template-button category__template-button_active" data-switch-template="grid">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M19 3C20.1046 3 21 3.88316 21 4.9726L21 8.33992C21 9.42936 20.1046 10.3125 19 10.3125H16C14.8954 10.3125 14 9.42936 14 8.33992L14 4.9726C14 3.88316 14.8954 3 16 3L19 3Z" stroke="#595BDE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5 3C3.89543 3 3 3.88316 3 4.9726L3.00001 8.33992C3.00001 9.42936 3.89544 10.3125 5.00001 10.3125H8.00001C9.10458 10.3125 10 9.42936 10 8.33992L10 4.9726C10 3.88316 9.10457 3 8 3L5 3Z" stroke="#595BDE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19 13.6875C20.1046 13.6875 21 14.5707 21 15.6601V19.0274C21 20.1168 20.1046 21 19 21H16C14.8954 21 14 20.1168 14 19.0274L14 15.6601C14 14.5707 14.8954 13.6875 16 13.6875H19Z" stroke="#595BDE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5.00001 13.6875C3.89544 13.6875 3.00001 14.5707 3.00001 15.6601L3.00001 19.0274C3.00001 20.1168 3.89544 21 5.00001 21H8.00001C9.10458 21 10 20.1168 10 19.0274L10 15.6601C10 14.5707 9.10458 13.6875 8.00001 13.6875H5.00001Z" stroke="#595BDE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </li>
 
+            <li class="category__template-item">
+              <button class="btn-reset category__template-button" data-switch-template="line">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M8.72156 6H21.6016M8.72156 12.48H21.6016M8.72156 18.96H21.6016M3.60156 6V6.0128M3.60156 12.48V12.4928M3.60156 18.96V18.9728" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </li>
+          </ul>
         </div>
-        <ul class="category__template-list d-tablet-none">
-          <li class="category__template-item">
-            <button class="btn-reset category__template-button category__template-button_active" data-switch-template="grid">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M19 3C20.1046 3 21 3.88316 21 4.9726L21 8.33992C21 9.42936 20.1046 10.3125 19 10.3125H16C14.8954 10.3125 14 9.42936 14 8.33992L14 4.9726C14 3.88316 14.8954 3 16 3L19 3Z" stroke="#595BDE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M5 3C3.89543 3 3 3.88316 3 4.9726L3.00001 8.33992C3.00001 9.42936 3.89544 10.3125 5.00001 10.3125H8.00001C9.10458 10.3125 10 9.42936 10 8.33992L10 4.9726C10 3.88316 9.10457 3 8 3L5 3Z" stroke="#595BDE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M19 13.6875C20.1046 13.6875 21 14.5707 21 15.6601V19.0274C21 20.1168 20.1046 21 19 21H16C14.8954 21 14 20.1168 14 19.0274L14 15.6601C14 14.5707 14.8954 13.6875 16 13.6875H19Z" stroke="#595BDE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M5.00001 13.6875C3.89544 13.6875 3.00001 14.5707 3.00001 15.6601L3.00001 19.0274C3.00001 20.1168 3.89544 21 5.00001 21H8.00001C9.10458 21 10 20.1168 10 19.0274L10 15.6601C10 14.5707 9.10458 13.6875 8.00001 13.6875H5.00001Z" stroke="#595BDE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </li>
 
-          <li class="category__template-item">
-            <button class="btn-reset category__template-button" data-switch-template="line">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M8.72156 6H21.6016M8.72156 12.48H21.6016M8.72156 18.96H21.6016M3.60156 6V6.0128M3.60156 12.48V12.4928M3.60156 18.96V18.9728" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </div>
+      <div class="category__products space-lg" data-products-container>
+        <a href="product-card.html" class="product-card">
+          <div class="product-card__top">
+            <span class="caption text-secondary-2 text-dark">381704</span>
+          </div>
+          <div class="product-card__img-wrap">
+            <img src="./img/popular-index/1.png" alt="">
+          </div>
+          <div class="product-card__bottom space-xxs">
+            <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400 Блинница EKSI HCM-400 ffff</h3>
+            <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
+          </div>
+        </a>
+        <a href="product-card.html" class="product-card">
+          <div class="product-card__top">
+            <div class="badge badge_akcia">
+              <img src="./img/icons/icon-badge-akcia.svg" alt="">
+              <span class="label-bold text-dark">акция</span>
+            </div>
+            <span class="caption text-secondary-2 text-dark">381704</span>
+          </div>
+          <div class="product-card__img-wrap">
+            <img src="./img/popular-index/1.png" alt="">
+          </div>
+          <div class="product-card__bottom space-xxs">
+            <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
+            <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
+          </div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card__top">
+            <div class="badge badge_akcia">
+              <img src="./img/icons/icon-badge-akcia.svg" alt="">
+              <span class="label-bold text-dark">акция</span>
+            </div>
+            <span class="caption text-secondary-2 text-dark">381704</span>
+          </div>
+          <div class="product-card__img-wrap">
+            <img src="./img/popular-index/1.png" alt="">
+          </div>
+          <div class="product-card__bottom space-xxs">
+            <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
+            <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
+          </div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card__top">
+            <div class="badge badge_akcia">
+              <img src="./img/icons/icon-badge-akcia.svg" alt="">
+              <span class="label-bold text-dark">акция</span>
+            </div>
+            <span class="caption text-secondary-2 text-dark">381704</span>
+          </div>
+          <div class="product-card__img-wrap">
+            <img src="./img/popular-index/1.png" alt="">
+          </div>
+          <div class="product-card__bottom space-xxs">
+            <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
+            <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
+          </div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card__top">
+            <div class="badge badge_akcia">
+              <img src="./img/icons/icon-badge-akcia.svg" alt="">
+              <span class="label-bold text-dark">акция</span>
+            </div>
+            <span class="caption text-secondary-2 text-dark">381704</span>
+          </div>
+          <div class="product-card__img-wrap">
+            <img src="./img/popular-index/1.png" alt="">
+          </div>
+          <div class="product-card__bottom space-xxs">
+            <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
+            <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
+          </div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card__top">
+            <div class="badge badge_akcia">
+              <img src="./img/icons/icon-badge-akcia.svg" alt="">
+              <span class="label-bold text-dark">акция</span>
+            </div>
+            <span class="caption text-secondary-2 text-dark">381704</span>
+          </div>
+          <div class="product-card__img-wrap">
+            <img src="./img/popular-index/1.png" alt="">
+          </div>
+          <div class="product-card__bottom space-xxs">
+            <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
+            <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
+          </div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card__top">
+            <div class="badge badge_akcia">
+              <img src="./img/icons/icon-badge-akcia.svg" alt="">
+              <span class="label-bold text-dark">акция</span>
+            </div>
+            <span class="caption text-secondary-2 text-dark">381704</span>
+          </div>
+          <div class="product-card__img-wrap">
+            <img src="./img/popular-index/1.png" alt="">
+          </div>
+          <div class="product-card__bottom space-xxs">
+            <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
+            <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
+          </div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card__top">
+            <div class="badge badge_akcia">
+              <img src="./img/icons/icon-badge-akcia.svg" alt="">
+              <span class="label-bold text-dark">акция</span>
+            </div>
+            <span class="caption text-secondary-2 text-dark">381704</span>
+          </div>
+          <div class="product-card__img-wrap">
+            <img src="./img/popular-index/1.png" alt="">
+          </div>
+          <div class="product-card__bottom space-xxs">
+            <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
+            <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
+          </div>
+        </a>
+        <a href="#" class="product-card product-card_full-width-tablet">
+          <div class="product-card__top">
+            <div class="badge badge_akcia">
+              <img src="./img/icons/icon-badge-akcia.svg" alt="">
+              <span class="label-bold text-dark">акция</span>
+            </div>
+            <span class="caption text-secondary-2 text-dark">381704</span>
+          </div>
+          <div class="product-card__img-wrap">
+            <img src="./img/popular-index/1.png" alt="">
+          </div>
+          <div class="product-card__bottom space-xxs">
+            <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
+            <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
+          </div>
+        </a>
+      </div>
+      <div class="pagination-wrap">
+        <ul class="pagination">
+          <li class="pagination__item">
+            <a href="#" class="text-l-bold pagination__link pagination__link_active">1</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="text-l-bold pagination__link">2</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="text-l-bold pagination__link">3</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="text-l-bold pagination__link">4</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="text-l-bold pagination__link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M13.3333 5.5L20 12.5M20 12.5L13.3333 19.5M20 12.5L4 12.5" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-            </button>
+            </a>
           </li>
         </ul>
+        <button class="btn-reset button-outlined text-l-bold text-dark">
+          Показать больше
+        </button>
       </div>
-
-    </div>
-    <div class="category__products space-lg" data-products-container>
-      <a href="product-card.html" class="product-card">
-        <div class="product-card__top">
-          <span class="caption text-secondary-2 text-dark">381704</span>
-        </div>
-        <div class="product-card__img-wrap">
-          <img src="./img/popular-index/1.png" alt="">
-        </div>
-        <div class="product-card__bottom space-xxs">
-          <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400 Блинница EKSI HCM-400 ffff</h3>
-          <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
-        </div>
-      </a>
-      <a href="product-card.html" class="product-card">
-        <div class="product-card__top">
-          <div class="badge badge_akcia">
-            <img src="./img/icons/icon-badge-akcia.svg" alt="">
-            <span class="label-bold text-dark">акция</span>
-          </div>
-          <span class="caption text-secondary-2 text-dark">381704</span>
-        </div>
-        <div class="product-card__img-wrap">
-          <img src="./img/popular-index/1.png" alt="">
-        </div>
-        <div class="product-card__bottom space-xxs">
-          <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
-          <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
-        </div>
-      </a>
-      <a href="#" class="product-card">
-        <div class="product-card__top">
-          <div class="badge badge_akcia">
-            <img src="./img/icons/icon-badge-akcia.svg" alt="">
-            <span class="label-bold text-dark">акция</span>
-          </div>
-          <span class="caption text-secondary-2 text-dark">381704</span>
-        </div>
-        <div class="product-card__img-wrap">
-          <img src="./img/popular-index/1.png" alt="">
-        </div>
-        <div class="product-card__bottom space-xxs">
-          <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
-          <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
-        </div>
-      </a>
-      <a href="#" class="product-card">
-        <div class="product-card__top">
-          <div class="badge badge_akcia">
-            <img src="./img/icons/icon-badge-akcia.svg" alt="">
-            <span class="label-bold text-dark">акция</span>
-          </div>
-          <span class="caption text-secondary-2 text-dark">381704</span>
-        </div>
-        <div class="product-card__img-wrap">
-          <img src="./img/popular-index/1.png" alt="">
-        </div>
-        <div class="product-card__bottom space-xxs">
-          <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
-          <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
-        </div>
-      </a>
-      <a href="#" class="product-card">
-        <div class="product-card__top">
-          <div class="badge badge_akcia">
-            <img src="./img/icons/icon-badge-akcia.svg" alt="">
-            <span class="label-bold text-dark">акция</span>
-          </div>
-          <span class="caption text-secondary-2 text-dark">381704</span>
-        </div>
-        <div class="product-card__img-wrap">
-          <img src="./img/popular-index/1.png" alt="">
-        </div>
-        <div class="product-card__bottom space-xxs">
-          <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
-          <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
-        </div>
-      </a>
-      <a href="#" class="product-card">
-        <div class="product-card__top">
-          <div class="badge badge_akcia">
-            <img src="./img/icons/icon-badge-akcia.svg" alt="">
-            <span class="label-bold text-dark">акция</span>
-          </div>
-          <span class="caption text-secondary-2 text-dark">381704</span>
-        </div>
-        <div class="product-card__img-wrap">
-          <img src="./img/popular-index/1.png" alt="">
-        </div>
-        <div class="product-card__bottom space-xxs">
-          <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
-          <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
-        </div>
-      </a>
-      <a href="#" class="product-card">
-        <div class="product-card__top">
-          <div class="badge badge_akcia">
-            <img src="./img/icons/icon-badge-akcia.svg" alt="">
-            <span class="label-bold text-dark">акция</span>
-          </div>
-          <span class="caption text-secondary-2 text-dark">381704</span>
-        </div>
-        <div class="product-card__img-wrap">
-          <img src="./img/popular-index/1.png" alt="">
-        </div>
-        <div class="product-card__bottom space-xxs">
-          <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
-          <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
-        </div>
-      </a>
-      <a href="#" class="product-card">
-        <div class="product-card__top">
-          <div class="badge badge_akcia">
-            <img src="./img/icons/icon-badge-akcia.svg" alt="">
-            <span class="label-bold text-dark">акция</span>
-          </div>
-          <span class="caption text-secondary-2 text-dark">381704</span>
-        </div>
-        <div class="product-card__img-wrap">
-          <img src="./img/popular-index/1.png" alt="">
-        </div>
-        <div class="product-card__bottom space-xxs">
-          <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
-          <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
-        </div>
-      </a>
-      <a href="#" class="product-card product-card_full-width-tablet">
-        <div class="product-card__top">
-          <div class="badge badge_akcia">
-            <img src="./img/icons/icon-badge-akcia.svg" alt="">
-            <span class="label-bold text-dark">акция</span>
-          </div>
-          <span class="caption text-secondary-2 text-dark">381704</span>
-        </div>
-        <div class="product-card__img-wrap">
-          <img src="./img/popular-index/1.png" alt="">
-        </div>
-        <div class="product-card__bottom space-xxs">
-          <h3 class="product-card__title text-s-regular text-dark">Блинница EKSI HCM-400</h3>
-          <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
-        </div>
-      </a>
-    </div>
-    <div class="category__pagination">
-      <ul class="pagination">
-        <li class="pagination__item">
-          <a href="#" class="text-l-bold pagination__link pagination__link_active">1</a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="text-l-bold pagination__link">2</a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="text-l-bold pagination__link">3</a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="text-l-bold pagination__link">4</a>
-        </li>
-        <li class="pagination__item">
-          <a href="#" class="text-l-bold pagination__link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-              <path d="M13.3333 5.5L20 12.5M20 12.5L13.3333 19.5M20 12.5L4 12.5" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <button class="btn-reset button-outlined text-l-bold text-dark">
-        Показать больше
-      </button>
     </div>
   </div>
 </main>
@@ -652,25 +651,25 @@
         <div class="footer__links-group">
           <ul class="footer__links">
             <li>
-              <a href="#" class="text-s-regular text-light">Посуда</a>
+              <a href="#" class="link text-light">Посуда</a>
             </li>
             <li>
-              <a href="catalog.html" class="text-s-regular text-light">Оборудование</a>
+              <a href="catalog.html" class="link text-light">Оборудование</a>
             </li>
             <li>
-              <a href="about-brand.html" class="text-s-regular text-light">О бренде</a>
+              <a href="about-brand.html" class="link text-light">О бренде</a>
             </li>
             <li>
-              <a href="#" class="text-s-regular text-light">В магазин</a>
+              <a href="#" class="link text-light">В магазин</a>
             </li>
           </ul>
 
           <ul class="footer__links">
             <li>
-              <a href="news.html" class="text-s-regular text-light">Новости и акции</a>
+              <a href="article-list.html" class="link text-light">Новости и акции</a>
             </li>
             <li>
-              <a href="shops.html" class="text-s-regular text-light">Где купить</a>
+              <a href="shops.html" class="link text-light">Где купить</a>
             </li>
           </ul>
         </div>
@@ -681,7 +680,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <a href="#" class="text-secondary-2 caption">Политика конфиденциальности</a>
+        <a href="#" class="text-secondary-2 caption link">Политика конфиденциальности</a>
         <p class="footer__copyright text-secondary-2 caption">© 2023 Все права защищены</p>
       </div>
     </div>

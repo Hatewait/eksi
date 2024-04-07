@@ -8,7 +8,7 @@
   --text--xl-bold: 1.75rem;
   --text--l-bold: 1.5rem;
   --text--s-semi-bold: 1.38rem;
-  --text--s-regular: 1.38rem;
+  --text--s-regular: 1.375rem;
   --text--m-regular: 1.12rem;
   --label--s-bold: 1.25rem;
   --caption: 1rem;
@@ -489,6 +489,10 @@
   margin-bottom: var(--space-xxl);
 }
 
+.space-xxxl {
+  margin-bottom: var(--space-xxxl);
+}
+
 .placeholder-primary::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color:    var(--text-primary);
 }
@@ -526,7 +530,9 @@
   background: var(--bg-accent-subdued);
   color: var(--text-accent-subdued);
   width: max-content;
+  height: max-content;
   transition: background-color 0.3s ease-in;
+  white-space: nowrap;
 }
 
 .button-outlined {
@@ -537,7 +543,9 @@
   border-radius: var(--radius-md);
   border: 1px solid var(--icon-accent);
   width: max-content;
+  height: max-content;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .round-button {
@@ -548,6 +556,8 @@
   width: 5.5rem;
   height: 5.5rem;
   background: var(--bg-accent-subdued);
+  transition: var(--transition);
+  cursor: pointer;
 }
 
 .round-button_rotated {
@@ -558,7 +568,10 @@
   display: flex;
   align-items: center;
   gap: var(--space-xxs);
+  white-space: nowrap;
 }
+
+
 
 .heading-width {
   max-width: 46rem;
@@ -577,25 +590,33 @@
   width: 100%;
 }
 
+.accent-link {
+  color: var(--text-accent);
+  transition: var(--transition);
+}
 
+.icon svg path {
+  transition: var(--transition);
+}
 
 @media (hover: hover), (-ms-high-contrast: none) {
-  .button-filled:hover {
+  .button-filled:hover, .round-button:hover {
     background: var(--bg-accent-subdued-hover);
   }
 
-  .button-filled:active {
+  .button-filled:active, .round-button:hover {
     background: var(--bg-accent-subdued-active);
   }
 
   .button-outlined:hover {
     color: var(--text-accent-hover);
-    border-color: var(--bg-accent-subdued-hover);
+    border-color: var(--bg-accent-hover);
+    background: transparent;
   }
 
   .button-outlined:active {
     color: var(--text-accent-active);
-    border-color: var(--bg-accent-subdued-active);
+    border-color: var(--bg-accent-active);
   }
   .link:hover {
     color: var(--text-accent-hover);
@@ -603,6 +624,22 @@
 
   .link:hover svg path {
     stroke: var(--text-accent-hover);
+  }
+
+  .accent-link:hover {
+    color: var(--text-accent-hover);
+  }
+
+  .icon-fill path, .icon-stroke path {
+    transition: var(--transition);
+  }
+
+  .icon-fill:hover path {
+    fill: var(--bg-accent-hover);
+  }
+
+  .icon-stroke:hover path {
+    stroke: var(--bg-accent-hover);
   }
 }
 
@@ -668,6 +705,7 @@
 
 /* input type checkbox */
 /* для элемента input c type="checkbox" */
+
 .custom-checkbox {
   cursor: pointer;
 }
@@ -709,7 +747,7 @@
   border: 2px solid var(--text-accent-hover);
 }
 
-.custom-checkbox>input:not(:disabled):hover+span {
+.custom-checkbox:not(.custom-checkbox_form)>input:not(:disabled):hover+span {
   color: var(--text-accent-hover);
 }
 

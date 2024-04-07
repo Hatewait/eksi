@@ -2,6 +2,9 @@ export const hideElement = (el) => el.classList.add('d-none');
 export const showElement = (el) => el.classList.remove('d-none');
 export const toggleElement = (el) => el.classList.toggle('d-none');
 
+
+const modal = new GraphModal();
+
 export const hideToggleButton = (elements, amount, button) => {
   if (elements.length <= amount) {
     hideElement(button);

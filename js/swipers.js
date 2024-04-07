@@ -220,75 +220,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  const swiper = new Swiper('[data-single-swiper]', {
+    loop: true,
+    effect: 'fade',
+    speed: 2000,
+    fadeEffect: {
+      crossFade: true
+    },
+    slidesPerView: 1,
 
-  /* old swipers */
-
-  const swiperTabsContainers = document.querySelectorAll('[data-tabs-swiper]');
-  let prevArrow = document.querySelectorAll('.bp-collections-nav__prev')
-  let nextArrow = document.querySelectorAll('.bp-collections-nav__next')
-
-  swiperTabsContainers.forEach(function (element, index) {
-    let swiper = new Swiper(element, {
-      loop: false,
-      slidesPerView: 'auto',
-      allowTouchMove: false,
-      spaceBetween: 80,
-      mousewheel: true,
-      slideToClickedSlide: true,
-      centeredSlides: false,
-
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          spaceBetween: 20,
-        },
-
-        728: {
-          spaceBetween: 60,
-        },
-
-        1200: {
-          spaceBetween: 80,
-        },
-
-      },
-
-      navigation: {
-        nextEl: nextArrow[index],
-        prevEl: prevArrow[index],
-      },
-
-
-    });
-  });
-
-
-  const swiperCollectionContainers = document.querySelectorAll('[data-collection-swiper]');
-
-  swiperCollectionContainers.forEach(function (element, index) {
-    let swiper = new Swiper(element, {
-      loop: true,
-      autoplay: true,
-      speed: 300,
-
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 16,
-        },
-
-        728: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        },
-
-        991: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        },
-      }
-    });
+    navigation: {
+      nextEl:  "[data-single-next]",
+      prevEl:  "[data-single-prev]",
+    },
   });
 
 });

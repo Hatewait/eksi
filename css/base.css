@@ -24,6 +24,7 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   font-family: var(--font-inter);
+  font-size: var(--text--s-regular);
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
@@ -50,6 +51,11 @@ a:hover {
 /* Common */
 aside, nav, footer, header, section, main {
   display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
 }
 
 ul, ul li {
