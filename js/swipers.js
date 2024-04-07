@@ -1,7 +1,29 @@
 'use strict'
 
 document.addEventListener("DOMContentLoaded", () => {
-  const progress = document.querySelector('.progress');
+  const updateLabels = ({ el, slides, realIndex: i, params: { loop } }) => {
+    let insertNextText = el.querySelector('[data-intro-next-insert-text]');
+    let insertCurrentText = el.querySelector('[data-intro-current-insert-text]');
+
+    const count = el.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length;
+    const next = loop
+        ? el.querySelector(`[data-swiper-slide-index="${(i + 1) % count}"]`)
+        : slides[i + 1];
+
+    insertNextText.textContent = next ? next.querySelector('[data-intro-next-text]').textContent : '';
+    insertCurrentText.textContent = next ? next.querySelector('[data-intro-current-text]').textContent : '';
+  }
+  const removeClass = (progress, introBottom, activeBullet) => {
+    progress.classList.remove("animate");
+    introBottom.classList.remove('animate');
+    activeBullet.classList.remove('animate');
+  }
+
+  const addClass = (progress, introBottom, activeBullet) => {
+    progress.classList.add("animate");
+    introBottom.classList.add('animate');
+    activeBullet.classList.add('animate');
+  }
 
   const swiperIntroSingle = new Swiper('[data-intro-swiper]', {
     loop: true,
@@ -11,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
       crossFade: true
     },
     slidesPerView: 1,
-    /*autoplay: {
-      delay: 5000,
-    },*/
+    autoplay: {
+      delay: 9500,
+    },
 
     pagination: {
       el: '.swiper-custom-pagination',
@@ -24,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
       renderBullet: function(index, className) {
         return '<span class="' + className + ' swiper-pagination-bullet--svg-animation"><svg width="70" height="70" viewBox="0 0 70 70"><circle class="svg__circle" cx="30" cy="30" r="20" fill="none" stroke-width="20"></circle><circle class="svg__circle-inner" cx="30" cy="30" r="20" stroke-width="10"></circle></svg></span>';
       },
-
     },
 
     navigation: {
@@ -33,39 +54,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     on: {
       init() {
+        const activeBullet = this.el.querySelector('.swiper-pagination-bullet-active');
+        const progress = this.el.querySelector('.progress');
+        const introBottom = this.el.querySelector('[data-intro-bottom]');
+
         setTimeout(updateLabels, 0, this);
-        progress.classList.remove("animate");
-        progress.classList.add("animate");
+        removeClass(progress, introBottom, activeBullet);
+        addClass(progress, introBottom, activeBullet);
       },
       slideChange() {
         updateLabels(this);
-        console.log('333')
       },
       slideChangeTransitionStart() {
-        progress.classList.remove("animate");
-        console.log('jjj')
+        const activeBullet = this.el.querySelector('.swiper-pagination-bullet-active');
+        const progress = this.el.querySelector('.progress');
+        const introBottom = this.el.querySelector('[data-intro-bottom]');
+        removeClass(progress, introBottom, activeBullet);
       },
       slideChangeTransitionEnd() {
-        progress.classList.add("animate");
-      }
+        const activeBullet = this.el.querySelector('.swiper-pagination-bullet-active');
+        const progress = this.el.querySelector('.progress');
+        const introBottom = this.el.querySelector('[data-intro-bottom]');
+        addClass(progress, introBottom, activeBullet);
+      },
     },
 
   });
 
-
-
-  function updateLabels({ el, slides, realIndex: i, params: { loop } }) {
-    let insertNextText = el.querySelector('[data-intro-next-insert-text]');
-    let insertCurrentText = el.querySelector('[data-intro-current-insert-text]');
-
-    const count = el.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length;
-    const next = loop
-            ? el.querySelector(`[data-swiper-slide-index="${(i + 1) % count}"]`)
-            : slides[i + 1];
-
-    insertNextText.textContent = next ? next.querySelector('[data-intro-next-text]').textContent : '';
-    insertCurrentText.textContent = next ? next.querySelector('[data-intro-current-text]').textContent : '';
-  }
 
   const swiperDecision = new Swiper('[data-decision-swiper]', {
     loop: true,
@@ -74,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navigation: {
       nextEl:  "[data-decision-next]",
       prevEl:  "[data-decision-prev]",
+      lockClass: 'swiper-nav__lock',
     },
 
     breakpoints: {
@@ -110,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navigation: {
       nextEl:  "[data-leader-next]",
       prevEl:  "[data-leader-prev]",
+      lockClass: 'swiper-nav__lock',
     },
 
   });
@@ -138,46 +155,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  /*swiperIntroSingle.on('slideChange', () => {
-    function animateElements(tl, el, animateOptions) {
-      tl.from(el, animateOptions)
-    }
-
-    const tl = gsap.timeline();
-    const animateOptions = {
-      opacity: 0,
-      duration: 0.5,
-      x: 500
-    }
-
-    const activeIndex = swiperIntroSingle.activeIndex;
-    const activeSlide = document.querySelector(`.intro__swiper .swiper-slide:nth-child(${activeIndex + 1})`);
-
-    console.log(activeSlide)
-
-    const slideTitle = activeSlide.querySelector('[data-gsap-title]');
-    const slideText = activeSlide.querySelector('[data-gsap-text]');
-    const slideList = activeSlide.querySelector('[data-gsap-list]');
-    const slideLink = activeSlide.querySelector('[data-gsap-link]');
-
-
-    animateElements(tl, slideTitle, animateOptions);
-    animateElements(tl, slideText, animateOptions);
-    animateElements(tl, slideList, animateOptions);
-    animateElements(tl, slideLink, animateOptions);
-  })
-
-
-
-*/
-
-
-  const sliderThumbs = new Swiper(".slider__thumbs .swiper", {
-    // ищем слайдер превью по селектору
-    // задаем параметры
-    direction: "vertical", // вертикальная прокрутка
-    slidesPerView: 3, // показывать по 3 превью
-    spaceBetween: 24, // расстояние между слайдами
+  const sliderThumbs = new Swiper('[data-product-video-thumbs-swiper]', {
+    direction: "vertical",
+    slidesPerView: 3,
+    spaceBetween: 24,
 
     freeMode: true, // при перетаскивании превью ведет себя как при скролле
     breakpoints: {
@@ -193,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 // Инициализация слайдера изображений
-  const sliderImages = new Swiper(".slider__images .swiper", {
+  const sliderImages = new Swiper('[data-product-video-swiper]', {
     direction: "vertical", // вертикальная прокрутка
     slidesPerView: 1, // показывать по 1 изображению
     spaceBetween: 32, // расстояние между слайдами
@@ -220,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  const swiper = new Swiper('[data-single-swiper]', {
+  const swiperSingle = new Swiper('[data-single-swiper]', {
     loop: true,
     effect: 'fade',
     speed: 2000,
@@ -232,7 +213,60 @@ document.addEventListener("DOMContentLoaded", () => {
     navigation: {
       nextEl:  "[data-single-next]",
       prevEl:  "[data-single-prev]",
+      lockClass: 'swiper-nav__lock',
     },
   });
+
+
+  // slider in product card
+
+  const swiperProductCardThumbs = new Swiper('[data-product-thumbs-swiper]', {
+    direction: "vertical",
+    spaceBetween: 16,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  const swiperProductCard = new Swiper('[data-product-swiper]', {
+    direction: "vertical",
+    slidesPerView: 1,
+    thumbs: {
+      swiper: swiperProductCardThumbs,
+    },
+  });
+
+  const moreButton = document.querySelector('[data-slider-more]');
+  if (moreButton) {
+    const amountEl = moreButton.querySelector('[data-length]');
+    amountEl.innerHTML = String(swiperProductCardThumbs.slides.length - 4);
+  }
+
+
+  const swiperSearchLayout = new Swiper('[data-search-layout-swiper]', {
+    navigation: {
+      nextEl:  "[data-search-layout-next]",
+      prevEl:  "[data-search-layout-prev]",
+      lockClass: 'swiper-nav__lock',
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+      },
+
+      728: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+
+      1281: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+    }
+  });
+
 
 });
