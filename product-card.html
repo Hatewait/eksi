@@ -613,16 +613,6 @@
         <div class="product-inner__col product-inner__col_gallery">
           <div class="slider slider_product">
 
-            <!-- <div class='swiper' id='my-slider'>
-               <div class='swiper-wrapper'>
-                 <div class='swiper-slide'>Slide 1</div>
-                 <div class='swiper-slide' id='youtube-slide'>
-                   <div id='player'></div>
-                 </div>
-                 <div class='swiper-slide'>Slide 3</div>
-                 <div class='swiper-slide'>Slide 4</div>
-               </div>
-             </div>-->
             <div class="slider__flex">
               <div class="slider__col">
                 <div class="slider__thumbs">
@@ -873,42 +863,40 @@
 
         <div class="product-inner__video">
           <div class="slider slider_product-video">
-
-            <!-- <div class='swiper' id='my-slider'>
-               <div class='swiper-wrapper'>
-                 <div class='swiper-slide'>Slide 1</div>
-                 <div class='swiper-slide' id='youtube-slide'>
-                   <div id='player'></div>
-                 </div>
-                 <div class='swiper-slide'>Slide 3</div>
-                 <div class='swiper-slide'>Slide 4</div>
-               </div>
-             </div>-->
             <div class="slider__flex">
               <div class="slider__images">
-                <div class="swiper" data-product-video-swiper>
-                  <!-- Слайдер с изображениями -->
+                <div class="swiper product-inner__video-swiper" data-product-video-swiper>
+                  <!-- Additional required wrapper -->
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/Y6lDHrINNfU?si=Fbj6--q9E5RUPSXF"
-                                frameborder="0"
-                                allowfullscreen></iframe>
-                      </div>
+                    <!-- Slides -->
+                    <div class="swiper-slide" data-youtube-slide>
+                      <a href="https://www.youtube.com/watch?v=Y6lDHrINNfU" data-fancybox="video">
+                        <div class="video-container" data-id="Y6lDHrINNfU">
+                          <div class="video-iframe"></div>
+                          <div class="video-play">
+                          </div>
+                        </div>
+                      </a>
+
                     </div>
-                    <div class="swiper-slide">
-                      <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/Y6lDHrINNfU?si=Fbj6--q9E5RUPSXF"
-                                frameborder="0"
-                                allowfullscreen></iframe>
-                      </div>
+                    <div class="swiper-slide" data-youtube-slide>
+                      <a href="https://www.youtube.com/watch?v=qK58JCNl1zE" data-fancybox="video">
+                        <div class="video-container" data-id="qK58JCNl1zE">
+                          <div class="video-iframe"></div>
+                          <div class="video-play">
+                          </div>
+                        </div>
+                      </a>
+
                     </div>
-                    <div class="swiper-slide">
-                      <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/Y6lDHrINNfU?si=Fbj6--q9E5RUPSXF"
-                                frameborder="0"
-                                allowfullscreen></iframe>
-                      </div>
+                    <div class="swiper-slide" data-youtube-slide>
+                      <a href="https://www.youtube.com/watch?v=_OWqjBMW7JA" data-fancybox="video">
+                        <div class="video-container" data-id="_OWqjBMW7JA">
+                          <div class="video-iframe"></div>
+                          <div class="video-play">
+                          </div>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -919,28 +907,24 @@
                     <!-- Слайдер с превью -->
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <div class="slider__image-wrap">
-                          <iframe src="https://www.youtube.com/embed/Y6lDHrINNfU?si=Fbj6--q9E5RUPSXF"
-                                  frameborder="0"
-                                  allowfullscreen></iframe>
-                          <!--<img src="./img/product-video/video-1.png" alt="" />-->
+                        <div class="swiper-slide__inner">
+                          <div class="slider__image-wrap">
+                            <img src="https://img.youtube.com/vi/Y6lDHrINNfU/maxresdefault.jpg" alt="" />
+                          </div>
                           <p class="heading-xs">next </p>
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="slider__image-wrap">
-                          <iframe src="https://www.youtube.com/embed/Y6lDHrINNfU?si=Fbj6--q9E5RUPSXF"
-                                  frameborder="0"
-                                  allowfullscreen></iframe>
-                          <!--<img src="./img/test.jpg" alt="" />-->
-                          <p class="heading-xs">next 2</p>
+                          <img src="https://img.youtube.com/vi/qK58JCNl1zE/maxresdefault.jpg" alt="" />
                         </div>
+                        <p class="heading-xs">next 2</p>
                       </div>
                       <div class="swiper-slide">
                         <div class="slider__image-wrap">
-                          <img src="./img/product-video/video-1.png" alt="" />
-                          <p class="heading-xs">next 3</p>
+                          <img src="https://img.youtube.com/vi/_OWqjBMW7JA/maxresdefault.jpg" alt="" />
                         </div>
+                        <p class="heading-xs">next 3</p>
                       </div>
                     </div>
                   </div>

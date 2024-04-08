@@ -1149,6 +1149,7 @@
 
 .search-layout__categories {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-sm);
   align-items: center;
 }
@@ -1188,7 +1189,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  height: 40rem;
 }
 
 .search-layout__swiper .product-card {
@@ -1725,10 +1725,6 @@
   background: var(--white-main);
 }
 
-.product-card:hover {
-
-}
-
 .product-card_line {
   flex-direction: row;
   align-items: center;
@@ -1737,7 +1733,7 @@
 .product-card__top {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 1.88rem;
   justify-content: space-between;
 }
 
@@ -1745,6 +1741,7 @@
   order: 3;
   flex-direction: column;
   margin-left: auto;
+  height: 100%;
 }
 
 .badge {
@@ -1758,6 +1755,7 @@
   align-items: flex-end;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 4.125rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
@@ -1860,7 +1858,7 @@
 }
 
 .actual-news__item:nth-child(1) .actual-news__item-bg {
-  background: url("../img/bg/art-1.png");
+  background-image: url("../img/bg/art-1.png");
   border-radius: 0 0 0 var(--radius-lg);
 }
 
@@ -1869,7 +1867,7 @@
 }
 
 .actual-news__item:nth-child(2) .actual-news__item-bg {
-  background: url("../img/bg/art-2.png");
+  background-image: url("../img/bg/art-2.png");
 }
 
 .actual-news__item:nth-child(3) {
@@ -1880,7 +1878,7 @@
 }
 
 .actual-news__item:nth-child(3) .actual-news__item-bg {
-  background: url("../img/bg/art-3.png");
+  background-image: url("../img/bg/art-3.png");
   border-radius: 0 var(--radius-lg) 0 0;
 }
 
@@ -2878,6 +2876,18 @@ input[type=number] {
   object-fit: cover;
 }
 
+.slider_product-video .slider__image-wrap {
+  height: 12.875rem;
+}
+
+/*
+.slider_product-video .swiper-slide__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs)
+}
+*/
+
 @media (max-width: 1280px) {
   .slider_product-video .slider__flex {
     flex-direction: column;
@@ -3496,4 +3506,34 @@ input[type=number] {
   .form__button {
     align-self: flex-end;
   }
+}
+
+
+
+
+
+
+
+/*
+
+.video-container {
+  position: relative;
+  padding-bottom: 67%;
+}*/
+
+.video-play,
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  pointer-events: none;
 }

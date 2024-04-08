@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const swiperDecision = new Swiper('[data-decision-swiper]', {
     loop: true,
-    autoHeight: true,
     speed: 900,
 
     navigation: {
@@ -156,51 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  const sliderThumbs = new Swiper('[data-product-video-thumbs-swiper]', {
-    direction: "vertical",
-    slidesPerView: 3,
-    spaceBetween: 24,
-
-    freeMode: true, // при перетаскивании превью ведет себя как при скролле
-    breakpoints: {
-      // условия для разных размеров окна браузера
-      0: {
-        // при 0px и выше
-        direction: "horizontal" // горизонтальная прокрутка
-      },
-      768: {
-        // при 768px и выше
-        direction: "vertical" // вертикальная прокрутка
-      }
-    }
-  });
-// Инициализация слайдера изображений
-  const sliderImages = new Swiper('[data-product-video-swiper]', {
-    direction: "vertical", // вертикальная прокрутка
-    slidesPerView: 1, // показывать по 1 изображению
-    spaceBetween: 32, // расстояние между слайдами
-    navigation: {
-      // задаем кнопки навигации
-      nextEl: ".slider__next", // кнопка Next
-      prevEl: ".slider__prev" // кнопка Prev
-    },
-    thumbs: {
-      // указываем на превью слайдер
-      swiper: sliderThumbs // указываем имя превью слайдера
-    },
-    breakpoints: {
-      // условия для разных размеров окна браузера
-      0: {
-        // при 0px и выше
-        direction: "horizontal" // горизонтальная прокрутка
-      },
-      768: {
-        // при 768px и выше
-        direction: "vertical" // вертикальная прокрутка
-      }
-    }
-  });
-
 
   const swiperSingle = new Swiper('[data-single-swiper]', {
     loop: true,
@@ -268,6 +222,5 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     }
   });
-
 
 });
