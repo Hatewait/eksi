@@ -32,6 +32,13 @@ const rangeSliderInit = () => {
     range.noUiSlider.set([null, this.value]);
   });
 
+  range.noUiSlider.on('start', function () {
+    this.target.classList.add('active');
+  });
+
+  range.noUiSlider.on('end', function () {
+    this.target.classList.remove('active');
+  })
 }
 
 const init = () => {

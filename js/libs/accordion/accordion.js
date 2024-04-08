@@ -5,7 +5,7 @@ class ItcAccordion {
     this._el = typeof target === 'string' ? document.querySelector(target) : target;
     const defaultConfig = {
       alwaysOpen: true,
-      duration: 350
+      duration: 100
     };
     this._config = Object.assign(defaultConfig, config);
     this.addEventListener();

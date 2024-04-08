@@ -8,12 +8,10 @@
   <meta name="format-detection" content="telephone=yes">
   <title>Профессиональная посуда из фарфора</title>
   <link rel="stylesheet" type="text/css" href="css/libs/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/libs/fancybox/fancybox.css" />
   <link rel="stylesheet" type="text/css" href="css/libs/animate/animate.min.css" />
   <link rel="stylesheet" type="text/css" href="css/libs/graph-modal/graph-modal.min.css" />
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -648,7 +646,7 @@
               <div class="swiper-custom-pagination"></div>
             </div>
             <div class="intro__swiper-group">
-              <span class="intro__swiper-caption text-light "
+              <span class="intro__swiper-caption text-light text-s-regular"
                     data-intro-current-insert-text>
               </span>
               <div class="progress">
@@ -658,7 +656,7 @@
             <div class="intro__swiper-nav d-tablet-none">
               <button class="btn-reset intro__swiper-next" data-intro-next>
                 <span class="intro__swiper-next-square"></span>
-                <span class=" intro__swiper-next-text" data-intro-next-insert-text></span>
+                <span class="text-s-regular intro__swiper-next-text" data-intro-next-insert-text></span>
               </button>
             </div>
           </div>
@@ -669,11 +667,11 @@
   </section>
   <section class="categories space-xxl">
     <h2 class="visually-hidden">Оборудование</h2>
-    <a href="#" class="categories__block categories__block_purple">
+    <a href="catalog.html" class="categories__block categories__block_purple">
       <p class="heading-m categories__title">Оборудование</p>
       <img src="./img/categories-index/cat-1.png" alt="">
     </a>
-    <a href="#" class="categories__block categories__block_dark">
+    <a href="catalog-2.html" class="categories__block categories__block_dark">
       <p class="heading-m categories__title">Посуда, емкости,
         инвентарь</p>
       <img src="./img/categories-index/cat-2.png" alt="">
@@ -769,22 +767,22 @@
         <div class="features__block">
           <img src="./img/features-index/1.svg" alt="Доступные цены">
           <p class="text-s-semi-bold text-light">Доступные цены</p>
-          <p class=" text-secondary">Индивидуальный подход к каждому проекту</p>
+          <p class="text-secondary-2">Индивидуальный подход к каждому проекту</p>
         </div>
         <div class="features__block">
           <img src="./img/features-index/2.svg" alt="Большой ассортимент">
           <p class="text-s-semi-bold text-light">Большой ассортимент</p>
-          <p class=" text-secondary">Поддержание широкого выбора оборудованияу</p>
+          <p class="text-secondary-2">Поддержание широкого выбора оборудованияу</p>
         </div>
         <div class="features__block">
           <img src="./img/features-index/3.svg" alt="Всегда на складе">
           <p class="text-s-semi-bold text-light">Всегда на складе</p>
-          <p class=" text-secondary">Обслуживание и доставка по всей России</p>
+          <p class="text-secondary-2">Обслуживание и доставка по всей России</p>
         </div>
         <div class="features__block">
           <img src="./img/features-index/4.svg" alt="Гарантия качества">
           <p class="text-s-semi-bold text-light">Гарантия качества</p>
-          <p class=" text-secondary">Качественное сервисное обслуживание</p>
+          <p class="text-secondary-2">Качественное сервисное обслуживание</p>
         </div>
       </div>
     </div>
@@ -794,7 +792,7 @@
     <div class="container">
       <div class="leader__top space-xl">
         <div class="leader__heading-wrap">
-          <p class="heading-l heading-width space-xl">
+          <p class="heading-l heading-width">
             Лидер в своей отрасли
           </p>
 
@@ -855,7 +853,7 @@
       <div class="container">
         <div class="popular__top">
           <div class="popular__heading-wrap">
-            <p class="heading-l heading-width space-xl text-light">
+            <p class="heading-l heading-width text-light">
               популярные товары
             </p>
 
@@ -985,11 +983,11 @@
     </div>
   </section>
 
-  <section class="actual-news space-xxl">
+  <section class="actual-news space-xxxl">
     <h2 class="visually-hidden">Актуальные новости</h2>
     <div class="container">
       <div class="actual-news__top space-xl">
-        <p class="heading-l heading-width space-md">
+        <p class="heading-l heading-width">
           Актуальные новости
         </p>
 
@@ -1068,8 +1066,8 @@
   </div>
 </footer>
 <!-- modals -->
-<div class="graph-modal modal-custom">
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="consult">
+<div class="graph-modal">
+  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="consult">
     <div class="graph-modal__content">
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
         <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1081,9 +1079,9 @@
 
       <form action="" class="form">
         <div class="form__inputs space-xl">
-          <input type="text" placeholder="Ваше имя" class="custom-input text-m-regular">
-          <input type="email" placeholder="Email" class="custom-input text-m-regular">
-          <input type="tel" placeholder="Телефон" class="custom-input text-m-regular">
+          <input type="text" placeholder="Ваше имя" class="custom-input placeholder-primary text-m-regular">
+          <input type="email" placeholder="Email" class="custom-input placeholder-primary text-m-regular">
+          <input type="tel" placeholder="Телефон" class="custom-input placeholder-primary text-m-regular">
         </div>
         <div class="form__action">
           <div class="form__agreement">
@@ -1102,7 +1100,7 @@
       </form>
     </div>
   </div>
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="subscribe">
+  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="subscribe">
     <div class="graph-modal__content">
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
         <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1114,8 +1112,8 @@
 
       <form action="" class="form">
         <div class="form__inputs space-xl">
-          <input type="text" placeholder="Ваше имя" class="custom-input text-m-regular">
-          <input type="email" placeholder="Email" class="custom-input text-m-regular">
+          <input type="text" placeholder="Ваше имя" class="custom-input placeholder-primary text-m-regular">
+          <input type="email" placeholder="Email" class="custom-input placeholder-primary text-m-regular">
         </div>
         <div class="form__action">
           <div class="form__agreement">
@@ -1134,7 +1132,7 @@
       </form>
     </div>
   </div>
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="success-consult">
+  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="success-consult">
     <div class="graph-modal__content">
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
         <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1147,7 +1145,7 @@
               aria-label="Закрыть модальное окно">Закрыть</button>
     </div>
   </div>
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="success-subscription">
+  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="success-subscription">
     <div class="graph-modal__content">
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
         <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1160,7 +1158,7 @@
               aria-label="Закрыть модальное окно">Закрыть</button>
     </div>
   </div>
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="error">
+  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="error">
     <div class="graph-modal__content">
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
         <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

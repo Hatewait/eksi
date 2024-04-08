@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const swiperDecision = new Swiper('[data-decision-swiper]', {
     loop: true,
+    autoHeight: true,
     speed: 900,
 
     navigation: {

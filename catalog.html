@@ -9,8 +9,8 @@
   <link rel="stylesheet" type="text/css" href="css/libs/graph-modal/graph-modal.min.css" />
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css">
+
 
 <body>
 <header class="header">
@@ -700,8 +700,8 @@
   </div>
 </footer>
 <!-- modals -->
-<div class="graph-modal modal-custom">
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="consult">
+<div class="graph-modal">
+  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="consult">
     <div class="graph-modal__content">
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
         <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -713,9 +713,9 @@
 
       <form action="" class="form">
         <div class="form__inputs space-xl">
-          <input type="text" placeholder="Ваше имя" class="custom-input text-m-regular">
-          <input type="email" placeholder="Email" class="custom-input text-m-regular">
-          <input type="tel" placeholder="Телефон" class="custom-input text-m-regular">
+          <input type="text" placeholder="Ваше имя" class="custom-input placeholder-primary text-m-regular">
+          <input type="email" placeholder="Email" class="custom-input placeholder-primary text-m-regular">
+          <input type="tel" placeholder="Телефон" class="custom-input placeholder-primary text-m-regular">
         </div>
         <div class="form__action">
           <div class="form__agreement">
@@ -734,7 +734,7 @@
       </form>
     </div>
   </div>
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="subscribe">
+  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="subscribe">
     <div class="graph-modal__content">
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
         <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -746,8 +746,8 @@
 
       <form action="" class="form">
         <div class="form__inputs space-xl">
-          <input type="text" placeholder="Ваше имя" class="custom-input text-m-regular">
-          <input type="email" placeholder="Email" class="custom-input text-m-regular">
+          <input type="text" placeholder="Ваше имя" class="custom-input placeholder-primary text-m-regular">
+          <input type="email" placeholder="Email" class="custom-input placeholder-primary text-m-regular">
         </div>
         <div class="form__action">
           <div class="form__agreement">
@@ -766,7 +766,7 @@
       </form>
     </div>
   </div>
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="success-consult">
+  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="success-consult">
     <div class="graph-modal__content">
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
         <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -779,7 +779,7 @@
               aria-label="Закрыть модальное окно">Закрыть</button>
     </div>
   </div>
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="success-subscription">
+  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="success-subscription">
     <div class="graph-modal__content">
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
         <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -792,7 +792,7 @@
               aria-label="Закрыть модальное окно">Закрыть</button>
     </div>
   </div>
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="error">
+  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="error">
     <div class="graph-modal__content">
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
         <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -805,7 +805,6 @@
               aria-label="Закрыть модальное окно">Закрыть</button>
     </div>
   </div>
-
 </div>
 
 <script type="text/javascript" src="./js/libs/swiper/swiper-bundle.min.js" defer></script>
