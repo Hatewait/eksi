@@ -82,7 +82,7 @@
 
     </div>
 
-    <div class="side-menu" data-menu>
+    <div class="side-menu animate__animated animate__fadeIn" data-menu>
       <div class="side-menu__top space-lg">
         <p class="heading-l">Меню</p>
         <button class="btn-reset side-menu__close" data-menu-close>
@@ -92,11 +92,12 @@
         </button>
       </div>
 
-      <div class="side-menu__level-0 d-none" data-level-0>
+      <!--Допменю для мобильных -->
+      <div class="side-menu__level-0 animate__animated animate__fadeIn" data-level-0>
         <div class="side-menu__mob-wrapper">
           <ul class="side-menu__mob-list space-lg">
             <li>
-              <a href="category.html" class="heading-s text-dark">Каталог</a>
+              <button class="btn-reset heading-s text-dark" type="button" data-open-menu-mobile>Каталог</button>
             </li>
             <li>
               <a href="article-list.html" class="heading-s text-dark">Новости и акции</a>
@@ -110,15 +111,19 @@
           </ul>
 
           <div class="side-menu__mob-bottom-actions">
-            <button class="btn-reset caption text-dark">Получить консультацию</button>
-            <a href="#" class="link caption text-dark">
+            <button class="btn-reset caption link text-dark" data-graph-path="consult">Получить консультацию</button>
+            <a href="#" class="side-menu__mob-link link caption text-dark">
               В магазин
-              <img src="./img/icons/lupa-mob.svg" alt="В магазин">
+              <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M16.9284 17.0401L20.4016 20.4001M19.2816 11.4401C19.2816 15.77 15.7715 19.2801 11.4416 19.2801C7.11165 19.2801 3.60156 15.77 3.60156 11.4401C3.60156 7.11019 7.11165 3.6001 11.4416 3.6001C15.7715 3.6001 19.2816 7.11019 19.2816 11.4401Z" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+              </svg>
             </a>
           </div>
         </div>
       </div>
-      <div class="side-menu__level-1" data-level-1>
+
+      <!--Основное меню -->
+      <div class="side-menu__level-1 animate__animated animate__fadeIn" data-level-1>
 
         <div class="side-menu__wrapper">
           <div class="side-menu__group">
@@ -176,69 +181,82 @@
               </li>
             </ul>
           </div>
+
+          <button data-close-level-1 class="btn-reset button-texted text-accent text-s-semi-bold d-mobile-flex d-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <path d="M6.9523 5.29995L2.39844 9.91544M2.39844 9.91544L6.9523 14.5309M2.39844 9.91544L17.5984 9.91544C19.8076 9.91544 21.5984 11.7063 21.5984 13.9154L21.5984 15.7C21.5984 17.9091 19.8076 19.7 17.5984 19.7L11.9984 19.7"
+                    stroke="#6667AB"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            Назад
+          </button>
         </div>
 
       </div>
-      <div id="1" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+
+      <!--Подменю со ссылками на категории -->
+      <div id="1" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование</p>
           <ul class="side-menu__list">
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="./img/menu/2-1.png" alt="">
                 Блинницы
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="./img/menu/2-2.png" alt="">
                 Вафельницы
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="./img/menu/2-3.png" alt="">
                 Чебуречницы
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="./img/menu/2-4.png" alt="">
                 Дегидраторы
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="./img/menu/2-5.png" alt="">
                 Микроволновые печи
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="./img/menu/2-6.png" alt="">
                 Барные кипятильники
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="./img/menu/2-7.png" alt="">
                 Жарочные поверхности
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="./img/menu/2-8.png" alt="">
                 Грили-саламандра
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="./img/menu/2-9.png" alt="">
                 Грили контактные
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="./img/menu/2-10.png" alt="">
                 Грили роликовые
               </a>
@@ -257,18 +275,18 @@
           Назад
         </button>
       </div>
-      <div id="2" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+      <div id="2" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование2</p>
           <ul class="side-menu__list">
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="" alt="">
                 Наплитная посуда
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="" alt="">
                 Гастроемкости
               </a>
@@ -286,18 +304,18 @@
           Назад
         </button>
       </div>
-      <div id="3" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+      <div id="3" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование 3</p>
           <ul class="side-menu__list">
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="" alt="">
                 Наплитная посуда
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="" alt="">
                 Гастроемкости
               </a>
@@ -315,18 +333,18 @@
           Назад
         </button>
       </div>
-      <div id="4" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+      <div id="4" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование 4</p>
           <ul class="side-menu__list">
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="" alt="">
                 Наплитная посуда
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="" alt="">
                 Гастроемкости
               </a>
@@ -344,18 +362,18 @@
           Назад
         </button>
       </div>
-      <div id="5" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+      <div id="5" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование 5</p>
           <ul class="side-menu__list">
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="" alt="">
                 Наплитная посуда
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="" alt="">
                 Гастроемкости
               </a>
@@ -373,18 +391,18 @@
           Назад
         </button>
       </div>
-      <div id="6" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+      <div id="6" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование</p>
           <ul class="side-menu__list">
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="" alt="">
                 Наплитная посуда
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark">
+              <a href="#" class="side-menu__link link text-dark">
                 <img src="" alt="">
                 Гастроемкости
               </a>
@@ -402,18 +420,18 @@
           Назад
         </button>
       </div>
-      <div id="7" class="side-menu__wrapper side-menu__wrapper_level-2 d-none" data-level-2>
+      <div id="7" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование</p>
           <ul class="side-menu__list">
             <li class="side-menu__item">
-              <a href="" class="side-menu__link link text-dark ">
+              <a href="#" class="side-menu__link link text-dark ">
                 <img src="" alt="">
                 Наплитная посуда
               </a>
             </li>
             <li class="side-menu__item">
-              <a href="" class="side-menu__linklink text-dark">
+              <a href="#" class="side-menu__linklink text-dark">
                 <img src="" alt="">
                 Гастроемкости
               </a>
@@ -450,7 +468,7 @@
       <div class="space-lg">
         <form action="">
           <div class="search-layout__form-group">
-            <input class="regular-input text-m-regular search-layout__input" type="search" placeholder="Введите запрос">
+            <input class="regular-input text-m-regular search-layout__input placeholder-primary" type="search" placeholder="Введите запрос">
             <button class="btn-reset search-layout__search-button">
               <svg class="icon-fill" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                 <path fill-rule="evenodd"
@@ -561,25 +579,33 @@
                 </div>
               </div>
 
-              <div class="search-layout__swiper-nav swiper-nav">
-                <button class="btn-reset swiper-nav__prev round-button" data-search-layout-prev>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M11.3558 4.27586C11.7558 4.65675 11.7712 5.28973 11.3903 5.68966L6.33285 11L19.9995 11C20.5518 11 20.9995 11.4477 20.9995 12C20.9995 12.5523 20.5518 13 19.9995 13L6.33284 13L11.3903 18.3103C11.7712 18.7103 11.7558 19.3433 11.3558 19.7241C10.9559 20.105 10.3229 20.0896 9.94204 19.6897L3.27537 12.6897C2.90756 12.3034 2.90756 11.6966 3.27537 11.3103L9.94204 4.31035C10.3229 3.91042 10.9559 3.89498 11.3558 4.27586Z"
-                          fill="#222222" />
-                  </svg>
-                </button>
-                <button class="btn-reset swiper-nav__next round-button" data-search-layout-next>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M13.3333 5L20 12M20 12L13.3333 19M20 12L4 12"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round" />
-                  </svg>
-                </button>
+              <div class="search-layout__buttons-group">
+                <div class="search-layout__swiper-nav swiper-nav">
+                  <button class="btn-reset swiper-nav__prev round-button" data-search-layout-prev>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M11.3558 4.27586C11.7558 4.65675 11.7712 5.28973 11.3903 5.68966L6.33285 11L19.9995 11C20.5518 11 20.9995 11.4477 20.9995 12C20.9995 12.5523 20.5518 13 19.9995 13L6.33284 13L11.3903 18.3103C11.7712 18.7103 11.7558 19.3433 11.3558 19.7241C10.9559 20.105 10.3229 20.0896 9.94204 19.6897L3.27537 12.6897C2.90756 12.3034 2.90756 11.6966 3.27537 11.3103L9.94204 4.31035C10.3229 3.91042 10.9559 3.89498 11.3558 4.27586Z"
+                            fill="#222222" />
+                    </svg>
+                  </button>
+                  <button class="btn-reset swiper-nav__next round-button" data-search-layout-next>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M13.3333 5L20 12M20 12L13.3333 19M20 12L4 12"
+                            stroke="#222222"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+
+                </div>
+
+                <a href="#" class="text-l-bold button-outlined text-dark">
+                  Смотреть все
+                </a>
               </div>
+
             </div>
 
           </div>
