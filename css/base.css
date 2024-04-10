@@ -35,6 +35,10 @@ main {
   flex-grow: 1;
 }
 
+.fancybox__container {
+  --fancybox-bg: rgb(255, 255, 255, 0.98);
+}
+
 footer {
   flex-shrink: 0;
 }

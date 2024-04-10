@@ -25,8 +25,7 @@ function onYouTubeIframeAPIReady() {
         }
       },
       playerVars: {
-        controls: 0,
-        modestbranding: 1,
+        'controls': 0,
       },
     });
 
@@ -95,26 +94,34 @@ const stopVideoOnPrevSlide = (swiper) => {
 
 
 const sliderThumbs = new Swiper('[data-product-video-thumbs-swiper]', {
-  direction: "vertical",
-  slidesPerView: 3,
-  spaceBetween: 24,
+  slidesPerView: 2,
+  mousewheelControl: true,
 
   freeMode: true,
   breakpoints: {
     0: {
       // при 0px и выше
-      direction: "horizontal"
+      slidesPerView: 2,
+      direction: "vertical",
+      spaceBetween: 16,
     },
-    768: {
+    728: {
       // при 768px и выше
-      direction: "vertical"
-    }
+      direction: "horizontal",
+      spaceBetween: 24,
+    },
+    1281: {
+      // при 768px и выше
+      direction: "vertical",
+      spaceBetween: 24,
+      /*slidesPerView: 3,*/
+    },
   }
 });
 
 // Инициализация слайдера изображений
 const productVideoSwiper = new Swiper('[data-product-video-swiper]', {
-  direction: "vertical",
+ // direction: "vertical",
   slidesPerView: 1,
   spaceBetween: 32,
 
@@ -124,12 +131,22 @@ const productVideoSwiper = new Swiper('[data-product-video-swiper]', {
   breakpoints: {
     0: {
       // при 0px и выше
-      direction: "horizontal"
+      direction: "horizontal",
+      slidesPerView: 1,
     },
-    768: {
+    728: {
       // при 768px и выше
-      direction: "vertical"
-    }
+      direction: "horizontal",
+      slidesPerView: 1,
+    },
+    1281: {
+      // при 768px и выше
+      direction: "vertical",
+      //autoHeight: true,
+      calculateHeight:true,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
   },
 
   on: {
@@ -137,6 +154,12 @@ const productVideoSwiper = new Swiper('[data-product-video-swiper]', {
       const activeSlide = this.slides[this.activeIndex];
       playVideoOnHover(activeSlide);
       stopVideoOnMouseLeave(activeSlide);
+
+      const slider = document.querySelector('[data-product-video-swiper]');
+      const currentSlide = this.slides[this.activeIndex];
+      const currentSlideItem = currentSlide.children[0];
+      console.log(currentSlideItem.clientHeight)
+      //slider.style.height = currentSlideItem.clientHeight + "px";
     },
   },
 });
@@ -147,4 +170,9 @@ productVideoSwiper.on('slideChange', function (swiper) {
   stopVideoOnPrevSlide(swiper);
   playVideoOnHover(activeSlide);
   stopVideoOnMouseLeave(activeSlide);
+
+  const slider = document.querySelector('[data-product-video-swiper]');
+  const currentSlide = swiper.slides[swiper.activeIndex];
+  //const currentSlideItem = currentSlide.children[0];
+  //slider.style.height = currentSlideItem.clientHeight + "px";
 });

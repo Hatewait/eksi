@@ -562,25 +562,32 @@
                 </div>
               </div>
 
-              <div class="search-layout__swiper-nav swiper-nav">
-                <button class="btn-reset swiper-nav__prev round-button" data-search-layout-prev>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M11.3558 4.27586C11.7558 4.65675 11.7712 5.28973 11.3903 5.68966L6.33285 11L19.9995 11C20.5518 11 20.9995 11.4477 20.9995 12C20.9995 12.5523 20.5518 13 19.9995 13L6.33284 13L11.3903 18.3103C11.7712 18.7103 11.7558 19.3433 11.3558 19.7241C10.9559 20.105 10.3229 20.0896 9.94204 19.6897L3.27537 12.6897C2.90756 12.3034 2.90756 11.6966 3.27537 11.3103L9.94204 4.31035C10.3229 3.91042 10.9559 3.89498 11.3558 4.27586Z"
-                          fill="#222222" />
-                  </svg>
-                </button>
-                <button class="btn-reset swiper-nav__next round-button" data-search-layout-next>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M13.3333 5L20 12M20 12L13.3333 19M20 12L4 12"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round" />
-                  </svg>
-                </button>
+              <div class="search-layout__buttons-group">
+                <div class="search-layout__swiper-nav swiper-nav">
+                  <button class="btn-reset swiper-nav__prev round-button" data-search-layout-prev>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M11.3558 4.27586C11.7558 4.65675 11.7712 5.28973 11.3903 5.68966L6.33285 11L19.9995 11C20.5518 11 20.9995 11.4477 20.9995 12C20.9995 12.5523 20.5518 13 19.9995 13L6.33284 13L11.3903 18.3103C11.7712 18.7103 11.7558 19.3433 11.3558 19.7241C10.9559 20.105 10.3229 20.0896 9.94204 19.6897L3.27537 12.6897C2.90756 12.3034 2.90756 11.6966 3.27537 11.3103L9.94204 4.31035C10.3229 3.91042 10.9559 3.89498 11.3558 4.27586Z"
+                            fill="#222222" />
+                    </svg>
+                  </button>
+                  <button class="btn-reset swiper-nav__next round-button" data-search-layout-next>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M13.3333 5L20 12M20 12L13.3333 19M20 12L4 12"
+                            stroke="#222222"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+
+                <a href="#" class="text-l-bold button-outlined text-dark">
+                  Смотреть все
+                </a>
               </div>
+
             </div>
 
           </div>
@@ -865,38 +872,45 @@
           <div class="slider slider_product-video">
             <div class="slider__flex">
               <div class="slider__images">
+                <!-- Слайдер с видео -->
                 <div class="swiper product-inner__video-swiper" data-product-video-swiper>
-                  <!-- Additional required wrapper -->
                   <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide" data-youtube-slide>
-                      <a href="https://www.youtube.com/watch?v=Y6lDHrINNfU" data-fancybox="video">
-                        <div class="video-container" data-id="Y6lDHrINNfU">
+                      <a href="https://www.youtube.com/watch?v=Y6lDHrINNfU"
+                         class="product-inner__video-link space-sm"
+                         data-fancybox="video">
+                        <div class="video-container " data-id="Y6lDHrINNfU">
                           <div class="video-iframe"></div>
-                          <div class="video-play">
-                          </div>
+                          <div class="video-play"></div>
                         </div>
                       </a>
-
+                      <p class="heading-xs">Шприц для колбас EKSI ESV-5</p>
                     </div>
                     <div class="swiper-slide" data-youtube-slide>
-                      <a href="https://www.youtube.com/watch?v=qK58JCNl1zE" data-fancybox="video">
+                      <a href="https://www.youtube.com/watch?v=qK58JCNl1zE"
+                         class="product-inner__video-link space-sm"
+                         data-fancybox="video">
                         <div class="video-container" data-id="qK58JCNl1zE">
                           <div class="video-iframe"></div>
                           <div class="video-play">
                           </div>
                         </div>
                       </a>
-
+                      <p class="heading-xs">2 Шприц для колбас EKSI ESV-5</p>
                     </div>
                     <div class="swiper-slide" data-youtube-slide>
-                      <a href="https://www.youtube.com/watch?v=_OWqjBMW7JA" data-fancybox="video">
+                      <a href="https://www.youtube.com/watch?v=_OWqjBMW7JA"
+                         class="product-inner__video-link space-sm"
+                         data-fancybox="video">
                         <div class="video-container" data-id="_OWqjBMW7JA">
                           <div class="video-iframe"></div>
                           <div class="video-play">
                           </div>
                         </div>
                       </a>
+
+                      <p class="heading-xs">3 Шприц для колбас EKSI ESV-5</p>
                     </div>
                   </div>
                 </div>
@@ -907,24 +921,22 @@
                     <!-- Слайдер с превью -->
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <div class="swiper-slide__inner">
-                          <div class="slider__image-wrap">
-                            <img src="https://img.youtube.com/vi/Y6lDHrINNfU/maxresdefault.jpg" alt="" />
-                          </div>
-                          <p class="heading-xs">next </p>
+                        <div class="slider__image-wrap space-xs">
+                          <img src="https://img.youtube.com/vi/Y6lDHrINNfU/maxresdefault.jpg" alt="" />
                         </div>
+                        <p class="heading-xs product-inner__video-text-thumb">Шприц для колбас EKSI ESV-5 </p>
                       </div>
                       <div class="swiper-slide">
-                        <div class="slider__image-wrap">
+                        <div class="slider__image-wrap space-xs">
                           <img src="https://img.youtube.com/vi/qK58JCNl1zE/maxresdefault.jpg" alt="" />
                         </div>
-                        <p class="heading-xs">next 2</p>
+                        <p class="heading-xs product-inner__video-text-thumb ">Вафельница EKSI gwb-1</p>
                       </div>
                       <div class="swiper-slide">
-                        <div class="slider__image-wrap">
+                        <div class="slider__image-wrap space-xs">
                           <img src="https://img.youtube.com/vi/_OWqjBMW7JA/maxresdefault.jpg" alt="" />
                         </div>
-                        <p class="heading-xs">next 3</p>
+                        <p class="heading-xs product-inner__video-text-thumb">Черемушкинский рынок</p>
                       </div>
                     </div>
                   </div>
