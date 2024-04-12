@@ -5,8 +5,10 @@ const menu = document.querySelector('[data-menu]');
 const buttonClose = document.querySelector('[data-menu-close]');
 const menuLinks = document.querySelectorAll('[data-menu-link]');
 
+
 menuButton.addEventListener('click', () => {
   menu.classList.add('opened');
+  document.body.classList.add('opened');
 })
 
 menuLinks.forEach((link) => {
@@ -17,6 +19,7 @@ document.addEventListener('click', e => {
   const target = e.target;
   if (!target.closest('[data-menu]') && !target.closest('[data-menu-button]')) {
     menu.classList.remove('opened');
+    document.body.classList.remove('opened');
   }
 });
 
@@ -54,6 +57,7 @@ const handleMenuChange = (e) => {
     buttonClose.addEventListener('click', () => {
       menu.classList.remove('opened');
       resetToMenuLevel1();
+      document.body.classList.remove('opened');
     })
   } else {
     hideBlock(menuLevel1);
@@ -74,6 +78,7 @@ const handleMenuChange = (e) => {
     buttonClose.addEventListener('click', () => {
       menu.classList.remove('opened');
       resetToMenuLevel0();
+      document.body.classList.remove('opened');
     })
   }
 }

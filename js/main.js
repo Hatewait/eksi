@@ -22,4 +22,3 @@ if(accordionTwo ) {
 if(accordionThree ) {
   new ItcAccordion('#accordion-3');
 }
-

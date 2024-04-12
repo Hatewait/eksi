@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <script type="text/javascript" src="./js/libs/accordion/accordion.js"></script>
+</head>
 <body>
 <header class="header">
   <div class="container header__container">
@@ -1182,12 +1181,14 @@
 <div class="graph-modal">
   <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="consult">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-m space-md">получить консультацию</p>
+      <div class="graph-modal__top space-md">
+        <p class="heading-m">получить консультацию</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
       <p class="space-lg">Наши специалисты свяжутся с вами в течении одного рабочего дня и помогут с подбором оборудования для вашего предприятия</p>
 
       <form action="" class="form">
@@ -1215,12 +1216,15 @@
   </div>
   <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="subscribe">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-m space-md">подписка на рассылку</p>
+      <div class="graph-modal__top space-md">
+        <p class="heading-m">подписка на рассылку</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
       <p class="space-lg">Будьте в курсе свежих новостей и актуальных новинок!</p>
 
       <form action="" class="form">
@@ -1247,12 +1251,15 @@
   </div>
   <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="success-consult">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-m space-md">запрос отправлен</p>
+      <div class="graph-modal__top space-md">
+        <p class="heading-m">запрос отправлен</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
       <p class="space-xl">Спасибо! Наши специалисты свяжутся с вами в течении одного рабочего дня</p>
       <button class="text-l-bold button-filled text-dark js-modal-close"
               aria-label="Закрыть модальное окно">Закрыть</button>
@@ -1260,12 +1267,15 @@
   </div>
   <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="success-subscription">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-m space-md">Подписка оформлена</p>
+      <div class="graph-modal__top space-md">
+        <p class="heading-m">Подписка оформлена</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
       <p class="space-xl">Спасибо! Теперь вы сможете получить письма с выгодными предложениями и скидками на указанный email</p>
       <button class="text-l-bold button-filled text-dark js-modal-close"
               aria-label="Закрыть модальное окно">Закрыть</button>
@@ -1273,12 +1283,15 @@
   </div>
   <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="error">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-m space-md">Ошибка!</p>
+      <div class="graph-modal__top space-md">
+        <p class="heading-m">Ошибка!</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
       <p class="space-xl">Произошла какая-то ошибка, форма не отправлена,  пожалуйста, попробуйте еще раз</p>
       <button class="text-l-bold button-filled text-dark js-modal-close"
               aria-label="Закрыть модальное окно">Закрыть</button>
@@ -1286,12 +1299,14 @@
   </div>
   <div class="graph-modal__container graph-modal__container_filter" role="dialog" aria-modal="true" data-graph-target="filter">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-l space-xl">Фильтры</p>
+      <div class="graph-modal__top space-xl">
+        <p class="heading-m">Фильтры</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
       <div class="graph-modal__content" data-insert-filter>
     </div>
   </div>
@@ -1301,6 +1316,7 @@
 <script type="text/javascript" src="./js/libs/transfer-elements/transfer-elements.min.js"></script>
 <script type="text/javascript" src="./js/libs/nouislider/nouislider.min.js"></script>
 <script type="text/javascript" src="./js/libs/swiper/swiper-bundle.min.js" defer></script>
+<script type="text/javascript" src="./js/libs/accordion/accordion.js"></script>
 <script type="text/javascript" src="./js/main.js"></script>
 <script type="text/javascript" src="./js/menu.js"></script>
 <script type="text/javascript" src="./js/search.js"></script>

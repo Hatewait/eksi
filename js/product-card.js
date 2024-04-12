@@ -93,73 +93,26 @@ const stopVideoOnPrevSlide = (swiper) => {
 }
 
 
-const sliderThumbs = new Swiper('[data-product-video-thumbs-swiper]', {
-  slidesPerView: 2,
-  mousewheelControl: true,
-
-  freeMode: true,
-  breakpoints: {
-    0: {
-      // при 0px и выше
-      slidesPerView: 2,
-      direction: "vertical",
-      spaceBetween: 16,
-    },
-    728: {
-      // при 768px и выше
-      direction: "horizontal",
-      spaceBetween: 24,
-    },
-    1281: {
-      // при 768px и выше
-      direction: "vertical",
-      spaceBetween: 24,
-      /*slidesPerView: 3,*/
-    },
-  }
-});
-
 // Инициализация слайдера изображений
 const productVideoSwiper = new Swiper('[data-product-video-swiper]', {
- // direction: "vertical",
   slidesPerView: 1,
-  spaceBetween: 32,
-
-  thumbs: {
-    swiper: sliderThumbs
-  },
-  breakpoints: {
-    0: {
-      // при 0px и выше
-      direction: "horizontal",
-      slidesPerView: 1,
-    },
-    728: {
-      // при 768px и выше
-      direction: "horizontal",
-      slidesPerView: 1,
-    },
-    1281: {
-      // при 768px и выше
-      direction: "vertical",
-      //autoHeight: true,
-      calculateHeight:true,
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-    },
+  loop: true,
+  effect: 'fade',
+  speed: 2000,
+  fadeEffect: {
+    crossFade: true
   },
 
+  navigation: {
+    nextEl:  "[data-product-video-next]",
+    prevEl:  "[data-product-video-prev]",
+    lockClass: 'swiper-nav__lock',
+  },
   on: {
     init: function () {
       const activeSlide = this.slides[this.activeIndex];
       playVideoOnHover(activeSlide);
       stopVideoOnMouseLeave(activeSlide);
-
-      const slider = document.querySelector('[data-product-video-swiper]');
-      const currentSlide = this.slides[this.activeIndex];
-      const currentSlideItem = currentSlide.children[0];
-      console.log(currentSlideItem.clientHeight)
-      //slider.style.height = currentSlideItem.clientHeight + "px";
     },
   },
 });
@@ -170,9 +123,4 @@ productVideoSwiper.on('slideChange', function (swiper) {
   stopVideoOnPrevSlide(swiper);
   playVideoOnHover(activeSlide);
   stopVideoOnMouseLeave(activeSlide);
-
-  const slider = document.querySelector('[data-product-video-swiper]');
-  const currentSlide = swiper.slides[swiper.activeIndex];
-  //const currentSlideItem = currentSlide.children[0];
-  //slider.style.height = currentSlideItem.clientHeight + "px";
 });

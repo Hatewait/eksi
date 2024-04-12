@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
       crossFade: true
     },
     slidesPerView: 1,
-    autoplay: {
+   /* autoplay: {
       delay: 9500,
-    },
+    },*/
 
     pagination: {
       el: '.swiper-custom-pagination',
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bulletClass: 'swiper-pagination-bullet',
       bulletActiveClass: 'swiper-pagination-bullet-active',
       renderBullet: function(index, className) {
-        return '<span class="' + className + ' swiper-pagination-bullet--svg-animation"><svg width="70" height="70" viewBox="0 0 70 70"><circle class="svg__circle" cx="30" cy="30" r="20" fill="none" stroke-width="20"></circle><circle class="svg__circle-inner" cx="30" cy="30" r="20" stroke-width="10"></circle></svg></span>';
+        return '<span class="' + className + ' swiper-pagination-bullet--svg-animation"><svg width="64" height="64" viewBox="0 0 64 64"><circle class="svg__circle" cx="30" cy="30" r="20" fill="none" stroke-width="20"></circle><circle class="svg__circle-inner" cx="30" cy="30" r="20" stroke-width="10"></circle></svg></span>';
       },
     },
 
@@ -176,26 +176,98 @@ document.addEventListener("DOMContentLoaded", () => {
   // slider in product card
 
   const swiperProductCardThumbs = new Swiper('[data-product-thumbs-swiper]', {
-    direction: "vertical",
-    spaceBetween: 16,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-
-  const swiperProductCard = new Swiper('[data-product-swiper]', {
-    direction: "vertical",
-    slidesPerView: 1,
-    thumbs: {
-      swiper: swiperProductCardThumbs,
+    slidesPerView: 3,
+    slideVisibleClass: 'swiper-slide-visible',
+    breakpoints: {
+      0: {
+        slidesPerView: 3,
+        direction: "horizontal",
+        spaceBetween: 16,
+      },
+      728: {
+        slidesPerView: 2,
+        direction: "vertical",
+        spaceBetween: 24,
+      },
+      1281: {
+        slidesPerView: 4,
+        direction: "vertical",
+        spaceBetween: 24,
+        /*slidesPerView: 3,*/
+      },
     },
+
+    on: {
+      afterInit: function () {
+        const moreButton = document.querySelector('[data-slider-more]');
+        const amountEl = moreButton.querySelector('[data-length]');
+        const slides = this.el.querySelectorAll('.swiper-slide');
+        const amountOfVisible = [...slides].filter(slide => slide.classList.contains('swiper-slide-visible'));
+        console.log(slides)
+        console.log(amountOfVisible)
+        console.log(amountOfVisible.length);
+        console.log('total', this.slides.length)
+        amountEl.innerHTML = String(this.slides.length - amountOfVisible.length);
+      },
+    },
+
+/*    on: {
+      afterInit: function () {
+        const moreButton = document.querySelector('[data-slider-more]');
+        const amountEl = moreButton.querySelector('[data-length]');
+        const slides = this.el.querySelectorAll('.swiper-slide');
+        const amountOfVisible = [...slides].filter(slide => slide.classList.contains('swiper-slide-visible'));
+        console.log(slides)
+        console.log(amountOfVisible)
+        console.log(amountOfVisible.length);
+        console.log('total', this.slides.length)
+        amountEl.innerHTML = String(this.slides.length - amountOfVisible.length);
+      },
+
+      beforeResize: function () {
+        const moreButton = document.querySelector('[data-slider-more]');
+        const amountEl = moreButton.querySelector('[data-length]');
+        const slides = this.el.querySelectorAll('.swiper-slide');
+        const amountOfVisible = [...slides].filter(slide => slide.classList.contains('swiper-slide-visible'));
+        console.log(slides)
+        console.log(amountOfVisible)
+        console.log(amountOfVisible.length);
+        console.log('total', this.slides.length)
+        amountEl.innerHTML = String(this.slides.length - amountOfVisible.length);
+      }
+    }*/
   });
 
-  const moreButton = document.querySelector('[data-slider-more]');
+/*  const moreButton = document.querySelector('[data-slider-more]');
   if (moreButton) {
     const amountEl = moreButton.querySelector('[data-length]');
     amountEl.innerHTML = String(swiperProductCardThumbs.slides.length - 4);
-  }
+  }*/
+
+  const swiperProductCard = new Swiper('[data-product-swiper]', {
+    thumbs: {
+      swiper: swiperProductCardThumbs,
+    },
+
+    breakpoints: {
+      0: {
+        // при 0px и выше
+        direction: "horizontal",
+        slidesPerView: 1,
+      },
+      728: {
+        // при 768px и выше
+        direction: "vertical",
+        slidesPerView: 1,
+      },
+      1281: {
+        // при 768px и выше
+        direction: "vertical",
+      },
+    },
+
+  });
+
 
 
   const swiperSearchLayout = new Swiper('[data-search-layout-swiper]', {

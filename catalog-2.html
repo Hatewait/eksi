@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
-
+</head>
 <body>
 <header class="header">
   <div class="container header__container">
@@ -631,20 +631,28 @@
       </div>
       <div class="catalog__grid-simple">
         <a href="#" class="catalog__card catalog-card catalog-card_simple bg-dark">
-          <h2 class="heading-xs text-light">Кастрюли и котлы</h2>
-          <img src="./img/catalog/1.png" alt="">
+          <h2 class="heading-xs text-light catalog-card__title">Кастрюли и котлы</h2>
+          <div class="catalog-card__img-wrap">
+            <img src="./img/catalog/1.png" alt="">
+          </div>
         </a>
         <a href="#" class="catalog__card catalog-card catalog-card_simple bg-dark">
-          <h2 class="heading-xs text-light">Сковороды</h2>
-          <img src="./img/catalog/1.png" alt="">
+          <h2 class="heading-xs text-light catalog-card__title">Сковороды</h2>
+          <div class="catalog-card__img-wrap">
+            <img src="./img/catalog/2.png" alt="">
+          </div>
         </a>
         <a href="#" class="catalog__card catalog-card catalog-card_simple bg-dark">
-          <h2 class="heading-xs text-light">Сотейники</h2>
-          <img src="./img/catalog/1.png" alt="">
+          <h2 class="heading-xs text-light catalog-card__title">Сотейники</h2>
+          <div class="catalog-card__img-wrap">
+            <img src="./img/catalog/2.png" alt="">
+          </div>
         </a>
         <a href="#" class="catalog__card catalog-card catalog-card_simple bg-dark">
-          <h2 class="heading-xs text-light">Гастроемкости</h2>
-          <img src="./img/catalog/1.png" alt="">
+          <h2 class="heading-xs text-light catalog-card__title">Гастроемкости</h2>
+          <div class="catalog-card__img-wrap">
+            <img src="./img/catalog/4.png" alt="">
+          </div>
         </a>
       </div>
     </div>
@@ -698,12 +706,14 @@
 <div class="graph-modal">
   <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="consult">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-m space-md">получить консультацию</p>
+      <div class="graph-modal__top space-md">
+        <p class="heading-m">получить консультацию</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
       <p class="space-lg">Наши специалисты свяжутся с вами в течении одного рабочего дня и помогут с подбором оборудования для вашего предприятия</p>
 
       <form action="" class="form">
@@ -731,12 +741,15 @@
   </div>
   <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="subscribe">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-m space-md">подписка на рассылку</p>
+      <div class="graph-modal__top space-md">
+        <p class="heading-m">подписка на рассылку</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
       <p class="space-lg">Будьте в курсе свежих новостей и актуальных новинок!</p>
 
       <form action="" class="form">
@@ -763,12 +776,15 @@
   </div>
   <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="success-consult">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-m space-md">запрос отправлен</p>
+      <div class="graph-modal__top space-md">
+        <p class="heading-m">запрос отправлен</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
       <p class="space-xl">Спасибо! Наши специалисты свяжутся с вами в течении одного рабочего дня</p>
       <button class="text-l-bold button-filled text-dark js-modal-close"
               aria-label="Закрыть модальное окно">Закрыть</button>
@@ -776,12 +792,15 @@
   </div>
   <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="success-subscription">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-m space-md">Подписка оформлена</p>
+      <div class="graph-modal__top space-md">
+        <p class="heading-m">Подписка оформлена</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
       <p class="space-xl">Спасибо! Теперь вы сможете получить письма с выгодными предложениями и скидками на указанный email</p>
       <button class="text-l-bold button-filled text-dark js-modal-close"
               aria-label="Закрыть модальное окно">Закрыть</button>
@@ -789,19 +808,21 @@
   </div>
   <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="error">
     <div class="graph-modal__content">
-      <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-        <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <p class="heading-m space-md">Ошибка!</p>
+      <div class="graph-modal__top space-md">
+        <p class="heading-m">Ошибка!</p>
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
       <p class="space-xl">Произошла какая-то ошибка, форма не отправлена,  пожалуйста, попробуйте еще раз</p>
       <button class="text-l-bold button-filled text-dark js-modal-close"
               aria-label="Закрыть модальное окно">Закрыть</button>
     </div>
   </div>
 </div>
-
 <script type="text/javascript" src="./js/libs/swiper/swiper-bundle.min.js" defer></script>
 <script type="text/javascript" src="./js/libs/graph-modal/graph-modal.min.js"></script>
 <script type="text/javascript" src="./js/main.js"></script>
