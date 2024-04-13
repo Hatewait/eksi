@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
       crossFade: true
     },
     slidesPerView: 1,
-   /* autoplay: {
+    autoplay: {
       delay: 9500,
-    },*/
+    },
 
     pagination: {
       el: '.swiper-custom-pagination',
@@ -175,12 +175,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // slider in product card
 
+  const calculateSlides = (swiper) => {
+    const moreButton = document.querySelector('[data-slider-more]');
+    const amountEl = moreButton.querySelector('[data-length]');
+    const slides = swiper.el.querySelectorAll('.swiper-slide');
+    const amountOfVisible = [...slides].filter(slide => slide.classList.contains('swiper-slide-visible'));
+    amountEl.innerHTML = String(swiper.slides.length - amountOfVisible.length);
+  }
   const swiperProductCardThumbs = new Swiper('[data-product-thumbs-swiper]', {
     slidesPerView: 3,
-    slideVisibleClass: 'swiper-slide-visible',
+    //slideVisibleClass: 'swiper-slide-visible',
+    watchSlidesProgress: true,
+    loop: false,
     breakpoints: {
       0: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         direction: "horizontal",
         spaceBetween: 16,
       },
@@ -199,52 +208,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     on: {
       afterInit: function () {
-        const moreButton = document.querySelector('[data-slider-more]');
-        const amountEl = moreButton.querySelector('[data-length]');
-        const slides = this.el.querySelectorAll('.swiper-slide');
-        const amountOfVisible = [...slides].filter(slide => slide.classList.contains('swiper-slide-visible'));
-        console.log(slides)
-        console.log(amountOfVisible)
-        console.log(amountOfVisible.length);
-        console.log('total', this.slides.length)
-        amountEl.innerHTML = String(this.slides.length - amountOfVisible.length);
-      },
-    },
-
-/*    on: {
-      afterInit: function () {
-        const moreButton = document.querySelector('[data-slider-more]');
-        const amountEl = moreButton.querySelector('[data-length]');
-        const slides = this.el.querySelectorAll('.swiper-slide');
-        const amountOfVisible = [...slides].filter(slide => slide.classList.contains('swiper-slide-visible'));
-        console.log(slides)
-        console.log(amountOfVisible)
-        console.log(amountOfVisible.length);
-        console.log('total', this.slides.length)
-        amountEl.innerHTML = String(this.slides.length - amountOfVisible.length);
+        calculateSlides(this)
       },
 
-      beforeResize: function () {
-        const moreButton = document.querySelector('[data-slider-more]');
-        const amountEl = moreButton.querySelector('[data-length]');
-        const slides = this.el.querySelectorAll('.swiper-slide');
-        const amountOfVisible = [...slides].filter(slide => slide.classList.contains('swiper-slide-visible'));
-        console.log(slides)
-        console.log(amountOfVisible)
-        console.log(amountOfVisible.length);
-        console.log('total', this.slides.length)
-        amountEl.innerHTML = String(this.slides.length - amountOfVisible.length);
+      breakpoint: function () {
+        calculateSlides(this)
       }
-    }*/
+    },
   });
 
-/*  const moreButton = document.querySelector('[data-slider-more]');
-  if (moreButton) {
-    const amountEl = moreButton.querySelector('[data-length]');
-    amountEl.innerHTML = String(swiperProductCardThumbs.slides.length - 4);
-  }*/
 
   const swiperProductCard = new Swiper('[data-product-swiper]', {
+   // direction: "horizontal",
+    slidesPerView: 1,
+
     thumbs: {
       swiper: swiperProductCardThumbs,
     },
@@ -253,12 +230,12 @@ document.addEventListener("DOMContentLoaded", () => {
       0: {
         // при 0px и выше
         direction: "horizontal",
-        slidesPerView: 1,
+        //slidesPerView: 1,
       },
       728: {
         // при 768px и выше
         direction: "vertical",
-        slidesPerView: 1,
+        //slidesPerView: 1,
       },
       1281: {
         // при 768px и выше

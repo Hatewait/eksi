@@ -13,7 +13,6 @@
   --label--s-bold: 1.25rem;
   --caption: 1rem;
 
-
   /*spaces */
   --space-none: 0rem;
   --space-xxs: 0.5rem;
@@ -145,7 +144,6 @@
   --bg-accent-subdued-active: var(--yellow-700);
   --bg-accent-hover: var(--purple-600);
   --bg-accent-active: var(--purple-700);
-
 
   /*bg-colors white */
   --bg-primary-white: var(--white-600);
@@ -494,57 +492,60 @@
 
 .placeholder-primary::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: var(--text-secondary);
-}
-.placeholder-primary:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
-  color:    var(--text-secondary);
   opacity: 1;
 }
 
-.placeholder-primary::-moz-placeholder{ /* Mozilla Firefox 19+ */
-  color:    var(--text-secondary);
+.placeholder-primary:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: var(--text-secondary);
   opacity: 1;
 }
 
-.placeholder-primary:-ms-input-placeholder{ /* Internet Explorer 10-11 */
-  color:    var(--text-secondary);
+.placeholder-primary::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: var(--text-secondary);
   opacity: 1;
 }
 
-.placeholder-primary::-ms-input-placeholder{ /* Microsoft Edge */
-  color:    var(--text-secondary);
+.placeholder-primary:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--text-secondary);
   opacity: 1;
 }
 
-.placeholder-primary::placeholder{ /* Most modern browsers support this now. */
-  color:    var(--text-secondary);
+.placeholder-primary::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--text-secondary);
+  opacity: 1;
+}
+
+.placeholder-primary::placeholder { /* Most modern browsers support this now. */
+  color: var(--text-secondary);
   opacity: 1;
 }
 
 .placeholder-primary::-webkit-input-placeholder:hover { /* WebKit, Blink, Edge */
-  color:    var(--text-primary);
+  color: var(--text-primary);
 }
+
 .placeholder-primary:-moz-placeholder:hover { /* Mozilla Firefox 4 to 18 */
-  color:    var(--text-primary);
+  color: var(--text-primary);
   opacity: 1;
 }
 
 .placeholder-primary::-moz-placeholder:hover { /* Mozilla Firefox 19+ */
-  color:    var(--text-primary);
+  color: var(--text-primary);
   opacity: 1;
 }
 
 .placeholder-primary:-ms-input-placeholder:hover { /* Internet Explorer 10-11 */
-  color:    var(--text-primary);
+  color: var(--text-primary);
   opacity: 1;
 }
 
 .placeholder-primary::-ms-input-placeholder:hover { /* Microsoft Edge */
-  color:    var(--text-primary);
+  color: var(--text-primary);
   opacity: 1;
 }
 
 .placeholder-primary::placeholder:hover { /* Most modern browsers support this now. */
-  color:    var(--text-primary);
+  color: var(--text-primary);
   opacity: 1;
 }
 
@@ -598,8 +599,6 @@
   white-space: nowrap;
 }
 
-
-
 .heading-width {
   max-width: 46rem;
 }
@@ -649,6 +648,7 @@
     color: var(--text-accent-active);
     border-color: var(--bg-accent-active);
   }
+
   .link:hover {
     color: var(--text-accent-hover);
   }
@@ -708,7 +708,6 @@
   }
 }
 
-
 /* breadcrumbs */
 
 .breadcrumbs {
@@ -735,29 +734,30 @@
   width: 1.5rem;
   height: 1.5rem;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z' fill='%23222222' stroke='%23222222' stroke-width='6'/%3e%3c/svg%3e");
-  margin: 0 var(--space-xxs);
   transition: var(--transition);
 }
 
-.breadcrumbs__item:has(.breadcrumbs__link_active)::before {
+.breadcrumbs__item.breadcrumbs__item_active::before {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12Z' fill='%23222222' fill-opacity='0.2'/%3e%3cpath d='M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z' stroke='%23222222' stroke-opacity='0.2' stroke-width='6'/%3e%3c/svg%3e");
 }
 
 @media (hover: hover), (-ms-high-contrast: none) {
-  .breadcrumbs__link:not(.breadcrumbs__link_active):hover {
+  .breadcrumbs__item:not(.breadcrumbs__item_active) .breadcrumbs__link:hover {
     color: var(--text-accent-hover);
   }
 
-  .breadcrumbs__item:has(.breadcrumbs__link:not(.breadcrumbs__link_active)):hover::before {
+  .breadcrumbs__item:hover::before {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z' fill='%236264C4FF' stroke='%236264C4FF' stroke-width='6'/%3e%3c/svg%3e");
+  }
+
+  .breadcrumbs__item_active:hover::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12Z' fill='%23222222' fill-opacity='0.2'/%3e%3cpath d='M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z' stroke='%23222222' stroke-opacity='0.2' stroke-width='6'/%3e%3c/svg%3e");
   }
 }
 
-
-.breadcrumbs__link_active {
+.breadcrumbs__item_active .breadcrumbs__link {
   color: var(--text-disabled);
 }
-
 
 /* checkbox */
 
@@ -768,7 +768,7 @@
   cursor: pointer;
 }
 
-.custom-checkbox>input {
+.custom-checkbox > input {
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -777,14 +777,14 @@
 }
 
 /* для элемента label, связанного с .custom-checkbox */
-.custom-checkbox>span {
+.custom-checkbox > span {
   display: inline-flex;
 
   user-select: none;
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */
-.custom-checkbox>span::before {
+.custom-checkbox > span::before {
   content: '';
   display: inline-block;
   width: 1.5rem;
@@ -801,52 +801,51 @@
 }
 
 /* стили при наведении курсора на checkbox */
-.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+.custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
   border: 2px solid var(--text-accent-hover);
 }
 
-.custom-checkbox:not(.custom-checkbox_form)>input:not(:disabled):hover+span {
+.custom-checkbox:not(.custom-checkbox_form) > input:not(:disabled):hover + span {
   color: var(--text-accent-hover);
 }
 
 /* стили для активного чекбокса (при нажатии на него) */
-.custom-checkbox>input:not(:disabled):active+span::before {
+.custom-checkbox > input:not(:disabled):active + span::before {
   /*border-color: var(--secondary);*/
 }
 
 /* стили для чекбокса, находящегося в фокусе */
-.custom-checkbox>input:focus+span::before {
+.custom-checkbox > input:focus + span::before {
 
 }
 
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-.custom-checkbox>input:focus:not(:checked)+span::before {
+.custom-checkbox > input:focus:not(:checked) + span::before {
   /*border-color: var(--secondary);*/
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */
-.custom-checkbox>input:checked+span::before {
+.custom-checkbox > input:checked + span::before {
   /* border-color: var(--secondary);*/
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='13' viewBox='0 0 16 13' fill='none'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 2.74048L5.28151 13L0 7.94467L2.45484 5.53756L5.28151 8.2432L13.5452 0.333374L16 2.74048Z' fill='%23595BDE'/%3e%3c/svg%3e");
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
-.custom-checkbox>input:disabled+span::before {
+.custom-checkbox > input:disabled + span::before {
   /* border-color: var(--grey-medium);*/
 }
 
-.custom-checkbox>input:disabled+span {
+.custom-checkbox > input:disabled + span {
   /*color: var(--grey-medium);*/
 }
 
-.custom-checkbox>input.disabled::after {
+.custom-checkbox > input.disabled::after {
   /* border-color: var(--grey-medium);*/
 }
 
-.custom-checkbox>input.disabled:checked::before {
+.custom-checkbox > input.disabled:checked::before {
   /* border-color: var(--grey-medium);*/
 }
-
 
 /* radio */
 
@@ -855,7 +854,7 @@
   cursor: pointer;
 }
 
-.custom-radio>input {
+.custom-radio > input {
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -864,14 +863,14 @@
 }
 
 /* для элемента label связанного с .custom-radio */
-.custom-radio>span {
+.custom-radio > span {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
 
 /* создание в label псевдоэлемента  before со следующими стилями */
-.custom-radio>span::before {
+.custom-radio > span::before {
   content: '';
   display: inline-block;
   width: 1.5rem;
@@ -888,49 +887,47 @@
 }
 
 /* стили при наведении курсора на радио */
-.custom-radio>input:not(:disabled):not(:checked)+span:hover::before {
+.custom-radio > input:not(:disabled):not(:checked) + span:hover::before {
   border: 2px solid var(--text-accent-hover);
 }
 
-.custom-radio>input:not(:disabled):hover+span {
+.custom-radio > input:not(:disabled):hover + span {
   color: var(--text-accent-hover);
 }
 
-
 /* стили для активной радиокнопки (при нажатии на неё) */
-.custom-radio>input:not(:disabled):active+span::before {
+.custom-radio > input:not(:disabled):active + span::before {
   /* border-color: var(--secondary);*/
 }
 
 /* стили для радиокнопки, находящейся в фокусе */
-.custom-radio>input:focus+span::before {
+.custom-radio > input:focus + span::before {
   /*border-color: var(--secondary);*/
 }
 
 /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
-.custom-radio>input:focus:not(:checked)+span::before {
+.custom-radio > input:focus:not(:checked) + span::before {
 
 }
 
 /* стили для радиокнопки, находящейся в состоянии checked */
-.custom-radio>input:checked+span::before {
+.custom-radio > input:checked + span::before {
   /*border-color: var(--secondary);*/
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3e%3ccircle cx='8' cy='8' r='6' fill='%23595BDE'/%3e%3c/svg%3e");
 }
 
-.custom-radio>input:checked+span {
+.custom-radio > input:checked + span {
   color: var(--text-accent-hover);
 }
 
 /* стили для радиокнопки, находящейся в состоянии disabled */
-.custom-radio>input:disabled+span::before {
+.custom-radio > input:disabled + span::before {
 
 }
 
-.custom-radio>input:disabled+span {
+.custom-radio > input:disabled + span {
 
 }
-
 
 /* header */
 
@@ -1172,10 +1169,13 @@
   position: relative;
 }
 
-.search-layout__input {
-
+.search-layout__input::placeholder {
+  transition: var(--transition);
 }
 
+.search-layout__input:hover::placeholder {
+  color: var(--text-primary);
+}
 
 .search-layout__buttons-group {
   display: flex;
@@ -1186,6 +1186,12 @@
 .search-layout__search-button {
   position: absolute;
   right: 20px;
+  top: 25px;
+}
+
+.search-layout__clear-button {
+  position: absolute;
+  right: 50px;
   top: 25px;
 }
 
@@ -1345,6 +1351,7 @@
 
 .intro__preloader {
   max-height: 64px;
+  margin-right: -7px;
 }
 
 .intro__swiper-group {
@@ -1372,6 +1379,10 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.intro__swiper-nav {
+  margin-top: auto;
 }
 
 .intro__slide-caption {
@@ -1476,16 +1487,15 @@
   width: 0;
   height: 100%;
   background: var(--white-main);
-  /*background-image: url("../img/icons/arrow-intro.svg");*/
   content: "";
 }
 
 .progress.animate .progress__bar:after {
   transition: width linear;
   width: 100%;
-  transition-duration: 7.5s;
+  transition-duration: 5.5s;
+  transition-delay: 3s;
 }
-
 
 .intro__bottom {
   opacity: 0;
@@ -1530,11 +1540,11 @@
 }
 
 .intro__swiper .intro__bottom.animate .intro__swiper-next-square {
-  animation: fadeInUpSD 1s both 7.5s;
+  animation: fadeInUpSD 1s both 8.5s;
 }
 
 .intro__swiper .intro__bottom.animate .intro__swiper-next-text {
-  animation: fadeInUpSD 1s both 8s;
+  animation: fadeInUpSD 1s both 9s;
 }
 
 @media (max-width: 727px) {
@@ -1674,12 +1684,15 @@
   border-radius: 0 0 0 var(--radius-lg);
 }
 
+.decision-swiper__img {
+  max-height: 21.75rem;
+}
+
 @media (hover: hover), (-ms-high-contrast: none) {
   .decision-swiper__slide:hover {
     background: var(--bg-accent-hover);
   }
 }
-
 
 @media (max-width: 1280px) {
   .decision-swiper {
@@ -1694,7 +1707,7 @@
 
 @media (max-width: 727px) {
   .decision-swiper {
-   height: auto;
+    height: auto;
   }
 }
 
@@ -1869,7 +1882,6 @@
     color: var(--text-accent-hover);
   }
 }
-
 
 @media (max-width: 1280px) {
   .product-card__img-wrap img {
@@ -2155,7 +2167,6 @@
 
 }
 
-
 .catalog-card__img-wrap {
   height: 16.75rem;
   width: 100%;
@@ -2215,6 +2226,7 @@
   .catalog-card__img-wrap {
     height: 14.6rem;
   }
+
   .catalog__grid-simple {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -2531,7 +2543,6 @@
   }
 }
 
-
 .dropdown-sort input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: #333333;
 }
@@ -2638,11 +2649,9 @@
   background: var(--bg-secondary-white);
 }
 
-
 .pagination__link svg path {
   transition: var(--transition);
 }
-
 
 @media (hover: hover), (-ms-high-contrast: none) {
   .pagination__link:not(.pagination__link_active):hover {
@@ -2657,7 +2666,6 @@
     fill: var(--bg-accent-hover);
   }
 }
-
 
 /* range slider */
 /* Chrome, Safari, Edge, Opera */
@@ -2906,8 +2914,6 @@ input[type=number] {
   }
 }
 
-
-
 /* product card slider */
 .slider_product .swiper {
   width: 100%;
@@ -3067,7 +3073,7 @@ input[type=number] {
 
   .slider_product .slider__images {
     order: -1;
-    height: auto;
+    height: 16.5rem;
     max-width: 100%;
   }
 
@@ -3088,8 +3094,8 @@ input[type=number] {
   }
 
   .slider_product .slider__thumbs .swiper-slide {
-   /* max-width: 3.75rem;
-    width: 100%;*/
+    /* max-width: 3.75rem;
+     width: 100%;*/
   }
 
   .slider_product .slider__thumbs .slider__image-wrap {
@@ -3655,7 +3661,6 @@ input[type=number] {
   }
 }
 
-
 /* modals */
 .graph-modal__container_custom {
   width: 39.25rem;
@@ -3697,13 +3702,19 @@ input[type=number] {
   gap: var(--space-md);
 }
 
+.form__inputs-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxxs);
+}
+
 .custom-input {
   padding: var(--space-sm) var(--space-md);
   width: 100%;
   max-width: 100%;
   border-radius: var(--radius-xs);
   background: var(--bg-primary-white);
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .custom-input::placeholder {
@@ -3725,6 +3736,27 @@ input[type=number] {
   gap: var(--space-xs)
 }
 
+input.just-validate-success-field {
+  /*outline: 2px solid var(--text-success-active);*/
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M15.142 9.98299L10.875 14.25L9.42049 12.7955M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3Z' stroke='%2300C893' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") !important;
+  background-position: right calc(.8em + .1875rem) center;
+  background-repeat: no-repeat;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.input.just-validate-error-field {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M12 12V7.5M12 15.3354V15.375M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z' stroke='%23EA435D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+  background-position: right calc(.8em + .1875rem) center;
+  background-repeat: no-repeat;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.form .just-validate-error-label {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text-critical) !important;
+}
+
 @media (max-width: 1280px) {
   .form__action {
     flex-direction: column;
@@ -3735,16 +3767,12 @@ input[type=number] {
   }
 }
 
-
 @media (max-width: 727px) {
   .graph-modal__container_custom {
     max-width: 22.5rem;
     width: 100%;
   }
 }
-
-
-
 
 /*
 
