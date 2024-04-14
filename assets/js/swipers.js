@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  // Инициализация слайдера в поиске
   const swiperSearchLayout = new Swiper('[data-search-layout-swiper]', {
     navigation: {
       nextEl:  "[data-search-layout-next]",
