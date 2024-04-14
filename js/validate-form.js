@@ -7,9 +7,7 @@ const validatorSubscribe = new window.JustValidate('[data-subscribe-form]');
 const clearFields = (form) => form.refresh();
 
 const modal = new GraphModal({
-  isOpen: (modal) => {
-
-  },
+  isOpen: (modal) => {},
   isClose: () => {
     const form = modal.modalContainer.querySelector('[data-form-reset]');
     if (form) {
@@ -23,7 +21,6 @@ const modal = new GraphModal({
 const selector = document.querySelector("input[type='tel']");
 const im = new Inputmask("+7 (999)-999-99-99");
 im.mask(selector);
-
 
 validatorConsult
     .addField('[data-input-name]', [
@@ -67,8 +64,8 @@ validatorConsult
     ])
     .onSuccess((event) => {
       //event.currentTarget.submit();
-      modal.modalContainer.classList.remove('graph-modal-open', 'fade', 'animate-open')
-      new GraphModal().open('success-consult');
+      modal.modalContainer.classList.remove('graph-modal-open', 'fade', 'animate-open') // закрывает модалку с формой
+      new GraphModal().open('success-consult'); // образец вызова модалки по событию
     });
 
 validatorSubscribe
@@ -100,6 +97,6 @@ validatorSubscribe
     .onSuccess((event) => {
       //event.currentTarget.submit();
       const currentModal = modal.modal.querySelector('[data-graph-target="subscribe"]');
-      modal.modalContainer.classList.remove('graph-modal-open', 'fade', 'animate-open')
-      new GraphModal().open('success-subscription');
+      modal.modalContainer.classList.remove('graph-modal-open', 'fade', 'animate-open') // закрывает модалку с формой
+      new GraphModal().open('success-subscription'); // образец вызова модалки по событию
     });

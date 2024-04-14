@@ -2,16 +2,19 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   /* hide filter in modal for mobiles */
-  new TransferElements(
-      {
-        sourceElement: document.querySelector('[data-filter-container]'),
-        breakpoints: {
-          1280: {
-            targetElement: document.querySelector('[data-insert-filter]')
-          },
+  const filterContainer = document.querySelector('[data-filter-container]');
+  if (filterContainer) {
+    new TransferElements(
+        {
+          sourceElement: filterContainer,
+          breakpoints: {
+            1280: {
+              targetElement: document.querySelector('[data-insert-filter]')
+            },
+          }
         }
-      }
-  );
+    );
+  }
 
   /* initialising accordions */
   const accordionOne = document.querySelector('#accordion-1');
@@ -29,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* show more inputs */
-
   const hideElement = (el) => el.classList.add('d-none');
   const toggleElement = (el) => el.classList.toggle('d-none');
 
@@ -66,17 +68,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputsGroupContainer = document.querySelectorAll('[data-items-group]');
   const MAX_INPUTS_AMOUNT = 5;
 
-  inputsGroupContainer.forEach((container) => {
-    const inputs = container.querySelectorAll('[data-filter-item]');
-    const toggleButton = container.querySelector('[data-res-toggle]');
+  if (inputsGroupContainer) {
+    inputsGroupContainer.forEach((container) => {
+      const inputs = container.querySelectorAll('[data-filter-item]');
+      const toggleButton = container.querySelector('[data-res-toggle]');
 
-    hideToggleButton(inputs, MAX_INPUTS_AMOUNT, toggleButton);
-    hideSomeElementsFromList(inputs, MAX_INPUTS_AMOUNT);
+      hideToggleButton(inputs, MAX_INPUTS_AMOUNT, toggleButton);
+      hideSomeElementsFromList(inputs, MAX_INPUTS_AMOUNT);
 
-    toggleButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      toggleShowAndHideElements(container, MAX_INPUTS_AMOUNT, toggleButton, inputs);
+      toggleButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleShowAndHideElements(container, MAX_INPUTS_AMOUNT, toggleButton, inputs);
+      })
     })
-  })
+  }
 });
 

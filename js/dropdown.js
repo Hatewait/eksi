@@ -17,13 +17,18 @@ const closeDropdownFromOutside = (dropdown) => {
   }
 };
 
-listOfOptions.forEach((option) => {
-  const currentSortBlock = option.closest('[data-sort-block]');
-  const currentInput = currentSortBlock.querySelector('[data-sort-input]');
-  option.addEventListener('click', (e) => selectOption(e, currentInput));
-});
+if (listOfOptions) {
+  listOfOptions.forEach((option) => {
+    const currentSortBlock = option.closest('[data-sort-block]');
+    const currentInput = currentSortBlock.querySelector('[data-sort-input]');
+    option.addEventListener('click', (e) => selectOption(e, currentInput));
+  });
+}
 
-dropdowns.forEach((dropdown) => {
-  dropdown.addEventListener('click', (e)  => toggleDropdown(e, dropdown));
-  body.addEventListener('click', () => closeDropdownFromOutside(dropdown));
-})
+if (dropdowns) {
+  dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener('click', (e)  => toggleDropdown(e, dropdown));
+    body.addEventListener('click', () => closeDropdownFromOutside(dropdown));
+  })
+
+}

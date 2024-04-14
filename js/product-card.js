@@ -84,7 +84,6 @@ const stopVideoOnMouseLeave = (slide) => {
   })
 }
 
-
 const stopVideoOnPrevSlide = (swiper) => {
   const isVideo = swiper.slides[swiper.previousIndex].querySelector('.video-container');
   if (isVideo) {
@@ -92,8 +91,7 @@ const stopVideoOnPrevSlide = (swiper) => {
   }
 }
 
-
-// Инициализация слайдера изображений
+// Инициализация слайдера с видео в карточке
 const productVideoSwiper = new Swiper('[data-product-video-swiper]', {
   slidesPerView: 1,
   loop: true,
@@ -117,10 +115,78 @@ const productVideoSwiper = new Swiper('[data-product-video-swiper]', {
   },
 });
 
-
 productVideoSwiper.on('slideChange', function (swiper) {
   const activeSlide = swiper.slides[swiper.activeIndex];
   stopVideoOnPrevSlide(swiper);
   playVideoOnHover(activeSlide);
   stopVideoOnMouseLeave(activeSlide);
+});
+
+// Инициализация слайдера с фото в карточке
+const calculateSlides = (swiper) => {
+  const moreButton = document.querySelector('[data-slider-more]');
+  const amountEl = moreButton.querySelector('[data-length]');
+  const slides = swiper.el.querySelectorAll('.swiper-slide');
+  const amountOfVisible = [...slides].filter(slide => slide.classList.contains('swiper-slide-visible'));
+  amountEl.innerHTML = String(swiper.slides.length - amountOfVisible.length);
+}
+const swiperProductCardThumbs = new Swiper('[data-product-thumbs-swiper]', {
+  slidesPerView: 3,
+  //slideVisibleClass: 'swiper-slide-visible',
+  watchSlidesProgress: true,
+  loop: false,
+  breakpoints: {
+    0: {
+      slidesPerView: 3,
+      direction: "horizontal",
+      spaceBetween: 16,
+    },
+    728: {
+      slidesPerView: 2,
+      direction: "vertical",
+      spaceBetween: 24,
+    },
+    1281: {
+      slidesPerView: 4,
+      direction: "vertical",
+      spaceBetween: 24,
+      /*slidesPerView: 3,*/
+    },
+  },
+
+  on: {
+    afterInit: function () {
+      calculateSlides(this)
+    },
+
+    breakpoint: function () {
+      calculateSlides(this)
+    }
+  },
+});
+const swiperProductCard = new Swiper('[data-product-swiper]', {
+  // direction: "horizontal",
+  slidesPerView: 1,
+
+  thumbs: {
+    swiper: swiperProductCardThumbs,
+  },
+
+  breakpoints: {
+    0: {
+      // при 0px и выше
+      direction: "horizontal",
+      //slidesPerView: 1,
+    },
+    728: {
+      // при 768px и выше
+      direction: "vertical",
+      //slidesPerView: 1,
+    },
+    1281: {
+      // при 768px и выше
+      direction: "vertical",
+    },
+  },
+
 });

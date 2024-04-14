@@ -2,24 +2,29 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const updateLabels = ({ el, slides, realIndex: i, params: { loop } }) => {
-    let insertNextText = el.querySelector('[data-intro-next-insert-text]');
-    let insertCurrentText = el.querySelector('[data-intro-current-insert-text]');
+    let insertLabel = el.querySelector('[data-insert-label]');
+    let insertNextLabel = el.querySelector('[data-insert-next-label]');
 
     const count = el.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length;
     const next = loop
         ? el.querySelector(`[data-swiper-slide-index="${(i + 1) % count}"]`)
         : slides[i + 1];
 
-    insertNextText.textContent = next ? next.querySelector('[data-intro-next-text]').textContent : '';
-    insertCurrentText.textContent = next ? next.querySelector('[data-intro-current-text]').textContent : '';
+    insertLabel.textContent = next ? next.dataset.nextLabel : '';
+    insertNextLabel.textContent = next ? next.dataset.label : '';
   }
-  const removeClass = (progress, introBottom, activeBullet) => {
+  const removeClass = (swiper) => {
+    const activeBullet = swiper.el.querySelector('.swiper-pagination-bullet-active');
+    const progress = swiper.el.querySelector('.progress');
+    const introBottom = swiper.el.querySelector('[data-intro-bottom]');
     progress.classList.remove("animate");
     introBottom.classList.remove('animate');
     activeBullet.classList.remove('animate');
   }
-
-  const addClass = (progress, introBottom, activeBullet) => {
+  const addClass = (swiper) => {
+    const activeBullet = swiper.el.querySelector('.swiper-pagination-bullet-active');
+    const progress = swiper.el.querySelector('.progress');
+    const introBottom = swiper.el.querySelector('[data-intro-bottom]');
     progress.classList.add("animate");
     introBottom.classList.add('animate');
     activeBullet.classList.add('animate');
@@ -28,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const swiperIntroSingle = new Swiper('[data-intro-swiper]', {
     loop: true,
     effect: 'fade',
-    speed: 2000,
+    speed: 1500,
     fadeEffect: {
       crossFade: true
     },
@@ -54,33 +59,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     on: {
       init() {
-        const activeBullet = this.el.querySelector('.swiper-pagination-bullet-active');
-        const progress = this.el.querySelector('.progress');
-        const introBottom = this.el.querySelector('[data-intro-bottom]');
-
-        setTimeout(updateLabels, 0, this);
-        removeClass(progress, introBottom, activeBullet);
-        addClass(progress, introBottom, activeBullet);
+        updateLabels(this)
+        setTimeout(removeClass, 0, this);
+        setTimeout(addClass, 0, this);
       },
       slideChange() {
-        updateLabels(this);
+        updateLabels(this)
       },
       slideChangeTransitionStart() {
-        const activeBullet = this.el.querySelector('.swiper-pagination-bullet-active');
-        const progress = this.el.querySelector('.progress');
-        const introBottom = this.el.querySelector('[data-intro-bottom]');
-        removeClass(progress, introBottom, activeBullet);
+        removeClass(this);
       },
       slideChangeTransitionEnd() {
-        const activeBullet = this.el.querySelector('.swiper-pagination-bullet-active');
-        const progress = this.el.querySelector('.progress');
-        const introBottom = this.el.querySelector('[data-intro-bottom]');
-        addClass(progress, introBottom, activeBullet);
+        addClass(this);
       },
     },
 
   });
-
 
   const swiperDecision = new Swiper('[data-decision-swiper]', {
     loop: true,
@@ -110,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     }
   });
-
 
   const swiperLeaderSingle = new Swiper('[data-leader-swiper]', {
     loop: true,
@@ -154,8 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
-
+  // Инициализация слайдера с фото в статьях
   const swiperSingle = new Swiper('[data-single-swiper]', {
     loop: true,
     effect: 'fade',
@@ -171,81 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
       lockClass: 'swiper-nav__lock',
     },
   });
-
-
-  // slider in product card
-
-  const calculateSlides = (swiper) => {
-    const moreButton = document.querySelector('[data-slider-more]');
-    const amountEl = moreButton.querySelector('[data-length]');
-    const slides = swiper.el.querySelectorAll('.swiper-slide');
-    const amountOfVisible = [...slides].filter(slide => slide.classList.contains('swiper-slide-visible'));
-    amountEl.innerHTML = String(swiper.slides.length - amountOfVisible.length);
-  }
-  const swiperProductCardThumbs = new Swiper('[data-product-thumbs-swiper]', {
-    slidesPerView: 3,
-    //slideVisibleClass: 'swiper-slide-visible',
-    watchSlidesProgress: true,
-    loop: false,
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-        direction: "horizontal",
-        spaceBetween: 16,
-      },
-      728: {
-        slidesPerView: 2,
-        direction: "vertical",
-        spaceBetween: 24,
-      },
-      1281: {
-        slidesPerView: 4,
-        direction: "vertical",
-        spaceBetween: 24,
-        /*slidesPerView: 3,*/
-      },
-    },
-
-    on: {
-      afterInit: function () {
-        calculateSlides(this)
-      },
-
-      breakpoint: function () {
-        calculateSlides(this)
-      }
-    },
-  });
-
-
-  const swiperProductCard = new Swiper('[data-product-swiper]', {
-   // direction: "horizontal",
-    slidesPerView: 1,
-
-    thumbs: {
-      swiper: swiperProductCardThumbs,
-    },
-
-    breakpoints: {
-      0: {
-        // при 0px и выше
-        direction: "horizontal",
-        //slidesPerView: 1,
-      },
-      728: {
-        // при 768px и выше
-        direction: "vertical",
-        //slidesPerView: 1,
-      },
-      1281: {
-        // при 768px и выше
-        direction: "vertical",
-      },
-    },
-
-  });
-
-
 
   const swiperSearchLayout = new Swiper('[data-search-layout-swiper]', {
     navigation: {
@@ -271,5 +188,4 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     }
   });
-
 });

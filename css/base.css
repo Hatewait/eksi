@@ -4,7 +4,7 @@
   margin: 0;
   border: none;
 
- /* outline: 1px solid deeppink;*/
+  /* outline: 1px solid deeppink;*/
 }
 
 *,
@@ -18,13 +18,12 @@ html {
   font-size: 16px;
 }
 
-
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   min-width: 320px;
-  font-family: var(--font-inter);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", var(--font-inter);, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: var(--text--s-regular);
   font-style: normal;
   font-weight: 400;
@@ -81,7 +80,6 @@ img, svg {
   height: auto;
   object-fit: contain;
 }
-
 
 /* Form */
 input, textarea, button, select {

@@ -5,7 +5,6 @@ const menu = document.querySelector('[data-menu]');
 const buttonClose = document.querySelector('[data-menu-close]');
 const menuLinks = document.querySelectorAll('[data-menu-link]');
 
-
 menuButton.addEventListener('click', () => {
   menu.classList.add('opened');
   document.body.classList.add('opened');
@@ -14,14 +13,6 @@ menuButton.addEventListener('click', () => {
 menuLinks.forEach((link) => {
   link.addEventListener('click', () => menu.classList.remove('opened'));
 })
-
-document.addEventListener('click', e => {
-  const target = e.target;
-  if (!target.closest('[data-menu]') && !target.closest('[data-menu-button]')) {
-    menu.classList.remove('opened');
-    document.body.classList.remove('opened');
-  }
-});
 
 const menuLevel0 = document.querySelector('[data-level-0]');
 const menuLevel1 = document.querySelector('[data-level-1]');
@@ -75,7 +66,7 @@ const handleMenuChange = (e) => {
       openBlock(menuLevel0);
     });
 
-    buttonClose.addEventListener('click', () => {
+    buttonClose.addEventListener('click', (e) => {
       menu.classList.remove('opened');
       resetToMenuLevel0();
       document.body.classList.remove('opened');
@@ -107,7 +98,3 @@ linksLevel1.forEach((link, i) => {
     openBlock(menuLevel2);
   })
 })
-
-
-
-

@@ -95,7 +95,7 @@
 
     <div class="side-menu animate__animated animate__fadeIn" data-menu>
       <div class="side-menu__top space-lg">
-        <p class="heading-l">Меню</p>
+        <p class="heading-m">Меню</p>
         <button class="btn-reset side-menu__close" data-menu-close>
           <svg class="icon-stroke"
                xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +146,7 @@
         </div>
       </div>
 
-      <!--Основное меню -->
+      <!--Основное меню с кнопками для перехода в подменю со ссылками -->
       <div class="side-menu__level-1 animate__animated animate__fadeIn" data-level-1>
 
         <div class="side-menu__wrapper">
@@ -221,7 +221,7 @@
       </div>
 
       <!--Подменю со ссылками на категории -->
-      <div id="1" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="1" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование</p>
           <ul class="side-menu__list">
@@ -299,7 +299,7 @@
           Назад
         </button>
       </div>
-      <div id="2" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="2" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование2</p>
           <ul class="side-menu__list">
@@ -328,7 +328,7 @@
           Назад
         </button>
       </div>
-      <div id="3" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="3" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование 3</p>
           <ul class="side-menu__list">
@@ -357,7 +357,7 @@
           Назад
         </button>
       </div>
-      <div id="4" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="4" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование 4</p>
           <ul class="side-menu__list">
@@ -386,7 +386,7 @@
           Назад
         </button>
       </div>
-      <div id="5" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="5" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование 5</p>
           <ul class="side-menu__list">
@@ -415,7 +415,7 @@
           Назад
         </button>
       </div>
-      <div id="6" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="6" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование</p>
           <ul class="side-menu__list">
@@ -444,7 +444,7 @@
           Назад
         </button>
       </div>
-      <div id="7" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="7" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование</p>
           <ul class="side-menu__list">
@@ -778,7 +778,7 @@
                         <div class="filters__field">
                           <div class="filters__inputs-group" data-items-group>
                             <label class="custom-checkbox filters__label" data-filter-item>
-                              <input id="checkbox1" type="checkbox" checked>
+                              <input id="checkbox1" type="checkbox">
                               <span>Масса, кг</span>
                             </label>
                             <label class="custom-checkbox filters__label" data-filter-item>
@@ -790,7 +790,7 @@
                               <span>Масса, кг</span>
                             </label>
                             <label class="custom-checkbox filters__label" data-filter-item>
-                              <input id="checkbox4" type="checkbox" checked>
+                              <input id="checkbox4" type="checkbox">
                               <span>Масса, кг</span>
                             </label>
                             <label class="custom-checkbox filters__label" data-filter-item>
@@ -802,7 +802,7 @@
                               <span>Масса, кг</span>
                             </label>
                             <label class="custom-checkbox filters__label" data-filter-item>
-                              <input id="checkbox7" type="checkbox" checked>
+                              <input id="checkbox7" type="checkbox">
                               <span>Масса, кг</span>
                             </label>
                             <label class="custom-checkbox filters__label" data-filter-item>
@@ -867,7 +867,7 @@
                               <span>Электрика</span>
                             </label>
                             <label class="custom-radio filters__label" data-filter-item>
-                              <input name="name" value="2" type="radio" checked>
+                              <input name="name" value="2" type="radio">
                               <span>Другое</span>
                             </label>
 
@@ -1006,7 +1006,7 @@
               </div>
               <div class="product-card__bottom space-xxs">
                 <h3 class="product-card__title  text-dark">Блинница EKSI HCM-400 Блинница EKSI HCM-400 ffff</h3>
-                <p class="product-card__price text-xl-bold text-dark">13 107 ₽ </p>
+                <p class="product-card__price text-xl-bold text-dark">13 107 ₽</p>
               </div>
             </a>
             <a href="product-card.html" class="product-card">
@@ -1141,6 +1141,17 @@
           <div class="pagination-wrap">
             <ul class="pagination">
               <li class="pagination__item">
+                <a href="#" class="text-l-bold pagination__link pagination__link_prev d-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M13.3333 5.5L20 12.5M20 12.5L13.3333 19.5M20 12.5L4 12.5"
+                          stroke="#222222"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </li>
+              <li class="pagination__item">
                 <a href="#" class="text-l-bold pagination__link pagination__link_active">1</a>
               </li>
               <li class="pagination__item">
@@ -1153,7 +1164,7 @@
                 <a href="#" class="text-l-bold pagination__link">4</a>
               </li>
               <li class="pagination__item">
-                <a href="#" class="text-l-bold pagination__link">
+                <a href="#" class="text-l-bold pagination__link pagination__link_next">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                     <path d="M13.3333 5.5L20 12.5M20 12.5L13.3333 19.5M20 12.5L4 12.5"
                           stroke="#222222"
@@ -1371,7 +1382,7 @@
 <script type="text/javascript" src="./js/libs/graph-modal/graph-modal.min.js"></script>
 <script type="text/javascript" src="./js/libs/transfer-elements/transfer-elements.min.js"></script>
 <script type="text/javascript" src="./js/libs/nouislider/nouislider.min.js"></script>
-<script type="text/javascript" src="./js/libs/swiper/swiper-bundle.min.js" defer></script>
+<script type="text/javascript" src="./js/libs/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="./js/libs/accordion/accordion.js"></script>
 <script type="text/javascript" src="./js/libs/validate/validate-js.min.js"></script>
 <script type="text/javascript" src="./js/libs/inputmask/inputmask.min.js"></script>

@@ -96,7 +96,7 @@
 
     <div class="side-menu animate__animated animate__fadeIn" data-menu>
       <div class="side-menu__top space-lg">
-        <p class="heading-l">Меню</p>
+        <p class="heading-m">Меню</p>
         <button class="btn-reset side-menu__close" data-menu-close>
           <svg class="icon-stroke"
                xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +147,7 @@
         </div>
       </div>
 
-      <!--Основное меню -->
+      <!--Основное меню с кнопками для перехода в подменю со ссылками -->
       <div class="side-menu__level-1 animate__animated animate__fadeIn" data-level-1>
 
         <div class="side-menu__wrapper">
@@ -222,7 +222,7 @@
       </div>
 
       <!--Подменю со ссылками на категории -->
-      <div id="1" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="1" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование</p>
           <ul class="side-menu__list">
@@ -300,7 +300,7 @@
           Назад
         </button>
       </div>
-      <div id="2" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="2" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование2</p>
           <ul class="side-menu__list">
@@ -329,7 +329,7 @@
           Назад
         </button>
       </div>
-      <div id="3" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="3" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование 3</p>
           <ul class="side-menu__list">
@@ -358,7 +358,7 @@
           Назад
         </button>
       </div>
-      <div id="4" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="4" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование 4</p>
           <ul class="side-menu__list">
@@ -387,7 +387,7 @@
           Назад
         </button>
       </div>
-      <div id="5" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="5" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование 5</p>
           <ul class="side-menu__list">
@@ -416,7 +416,7 @@
           Назад
         </button>
       </div>
-      <div id="6" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="6" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование</p>
           <ul class="side-menu__list">
@@ -445,7 +445,7 @@
           Назад
         </button>
       </div>
-      <div id="7" class="side-menu__wrapper side-menu__wrapper_level-2" data-level-2>
+      <div id="7" class="side-menu__wrapper side-menu__level-2" data-level-2>
         <div class="side-menu__group">
           <p class="heading-s space-sm">Тепловое Оборудование</p>
           <ul class="side-menu__list">
@@ -664,14 +664,14 @@
     <div class="intro__swiper swiper" data-intro-swiper>
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide intro__slide intro__slide_1">
+        <div class="swiper-slide intro__slide"
+             data-label="Кафе-пекарня Cinnabon в ТЦ Арена Плаза"
+             data-next-label="Ресторан «NARNIA»"
+             style="background-image: url('./img/slider-intro/slide-1.png')">
           <div class="container">
             <div class="intro__slide-content">
-              <span class="visually-hidden" data-intro-next-text>Кафе-пекарня Cinnabon в ТЦ Арена Плаза</span>
-              <span class="visually-hidden" data-intro-current-text>Ресторан «NARNIA»</span>
               <p class="heading-xl space-md intro__slide-heading">Помощь вкусному бизнесу</p>
-              <p class=" space-lg intro__slide-text"
-                 data-gsap-text>Бизнес-партнер Cinnabon. Наши специалисты оснащают все филиалы кафе в России</p>
+              <p class=" space-lg intro__slide-text">Бизнес-партнер Cinnabon. Наши специалисты оснащают все филиалы кафе в России</p>
               <ul class="intro__slide-list space-lg">
                 <li class="caption">
                   Барный холодильник Eksi
@@ -688,14 +688,14 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide intro__slide intro__slide_2">
+        <div class="swiper-slide intro__slide"
+             data-label="Ресторан «NARNIA»"
+             data-next-label="Кафе-пекарня Cinnabon в ТЦ Арена Плаза"
+             style="background-image: url('./img/slider-intro/slide-2.png')">
           <div class="container">
             <div class="intro__slide-content">
-              <span class="visually-hidden" data-intro-next-text>Ресторан «NARNIA»</span>
-              <span class="visually-hidden" data-intro-current-text>Кафе-пекарня Cinnabon в ТЦ Арена Плаза</span>
               <p class="heading-xl space-md intro__slide-heading">Делаем ваш кофе вкуснее</p>
-              <p class=" space-lg intro__slide-text"
-                 data-gsap-text>Оснащением и проектированием NARNIA занимались специалисты из нашей компании</p>
+              <p class=" space-lg intro__slide-text">Оснащением и проектированием NARNIA занимались специалисты из нашей компании</p>
               <ul class="intro__slide-list space-lg">
                 <li class="caption">
                   Тепловое оборудование от Eksi
@@ -713,7 +713,7 @@
             </div>
             <div class="intro__swiper-group">
               <span class="intro__swiper-caption text-light text-s-regular"
-                    data-intro-current-insert-text>
+                    data-insert-label>
               </span>
               <div class="progress">
                 <div class="progress__bar"></div>
@@ -722,7 +722,7 @@
             <div class="intro__swiper-nav d-tablet-none">
               <button class="btn-reset intro__swiper-next" data-intro-next>
                 <span class="intro__swiper-next-square"></span>
-                <span class="text-s-regular intro__swiper-next-text" data-intro-next-insert-text></span>
+                <span class="text-s-regular intro__swiper-next-text" data-insert-next-label></span>
               </button>
             </div>
           </div>
@@ -1124,9 +1124,11 @@
 
         <div class="footer__action">
           <button class="btn-reset text-l-bold button-outlined bg-dark text-light footer__action-button"
-                  data-graph-path="subscribe">подписаться на рассылку</button>
+                  data-graph-path="subscribe">подписаться на рассылку
+          </button>
           <button class="text-l-bold button-filled text-dark footer__action-button"
-                  data-graph-path="consult">консультация</button>
+                  data-graph-path="consult">консультация
+          </button>
         </div>
       </div>
       <div class="footer__bottom">
@@ -1138,13 +1140,21 @@
 </footer>
 <!-- modals -->
 <div class="graph-modal">
-  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="consult">
+  <div class="graph-modal__container graph-modal__container_custom"
+       role="dialog"
+       aria-modal="true"
+       data-graph-target="consult">
     <div class="graph-modal__content">
       <div class="graph-modal__top space-md">
         <p class="heading-m">получить консультацию</p>
         <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          <svg class="icon-stroke"
+               xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round" />
           </svg>
         </button>
       </div>
@@ -1153,15 +1163,27 @@
       <form action="" class="form" data-consult-form data-form-reset>
         <div class="form__inputs space-xl">
           <div class="form__inputs-group">
-            <input name="name" type="text" placeholder="Ваше имя" class="custom-input placeholder-primary text-m-regular" data-input-name>
+            <input name="name"
+                   type="text"
+                   placeholder="Ваше имя"
+                   class="custom-input placeholder-primary text-m-regular"
+                   data-input-name>
           </div>
 
           <div class="form__inputs-group">
-            <input name="email" type="email" placeholder="Email" class="custom-input placeholder-primary text-m-regular" data-input-email>
+            <input name="email"
+                   type="email"
+                   placeholder="Email"
+                   class="custom-input placeholder-primary text-m-regular"
+                   data-input-email>
           </div>
 
-          <div  class="form__inputs-group">
-            <input name="tel" type="tel" placeholder="Телефон" class="custom-input placeholder-primary text-m-regular" data-input-tel>
+          <div class="form__inputs-group">
+            <input name="tel"
+                   type="tel"
+                   placeholder="Телефон"
+                   class="custom-input placeholder-primary text-m-regular"
+                   data-input-tel>
           </div>
         </div>
         <div class="form__action">
@@ -1181,13 +1203,21 @@
       </form>
     </div>
   </div>
-  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="subscribe">
+  <div class="graph-modal__container graph-modal__container_custom"
+       role="dialog"
+       aria-modal="true"
+       data-graph-target="subscribe">
     <div class="graph-modal__content">
       <div class="graph-modal__top space-md">
         <p class="heading-m">подписка на рассылку</p>
         <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          <svg class="icon-stroke"
+               xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round" />
           </svg>
         </button>
       </div>
@@ -1197,11 +1227,19 @@
       <form action="" class="form" data-subscribe-form data-form-reset>
         <div class="form__inputs space-xl">
           <div class="form__inputs-group">
-            <input name="name" type="text" placeholder="Ваше имя" class="custom-input placeholder-primary text-m-regular" data-input-name>
+            <input name="name"
+                   type="text"
+                   placeholder="Ваше имя"
+                   class="custom-input placeholder-primary text-m-regular"
+                   data-input-name>
           </div>
 
           <div class="form__inputs-group">
-            <input name="email" type="email" placeholder="Email" class="custom-input placeholder-primary text-m-regular" data-input-email>
+            <input name="email"
+                   type="email"
+                   placeholder="Email"
+                   class="custom-input placeholder-primary text-m-regular"
+                   data-input-email>
           </div>
         </div>
         <div class="form__action">
@@ -1221,59 +1259,85 @@
       </form>
     </div>
   </div>
-  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="success-consult">
+  <div class="graph-modal__container graph-modal__container_custom"
+       role="dialog"
+       aria-modal="true"
+       data-graph-target="success-consult">
     <div class="graph-modal__content">
       <div class="graph-modal__top space-md">
         <p class="heading-m">запрос отправлен</p>
         <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          <svg class="icon-stroke"
+               xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round" />
           </svg>
         </button>
       </div>
 
       <p class="space-xl">Спасибо! Наши специалисты свяжутся с вами в течении одного рабочего дня</p>
       <button class="text-l-bold button-filled text-dark js-modal-close"
-              aria-label="Закрыть модальное окно">Закрыть</button>
+              aria-label="Закрыть модальное окно">Закрыть
+      </button>
     </div>
   </div>
-  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="success-subscription">
+  <div class="graph-modal__container graph-modal__container_custom"
+       role="dialog"
+       aria-modal="true"
+       data-graph-target="success-subscription">
     <div class="graph-modal__content">
       <div class="graph-modal__top space-md">
         <p class="heading-m">Подписка оформлена</p>
         <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          <svg class="icon-stroke"
+               xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round" />
           </svg>
         </button>
       </div>
 
       <p class="space-xl">Спасибо! Теперь вы сможете получить письма с выгодными предложениями и скидками на указанный email</p>
       <button class="text-l-bold button-filled text-dark js-modal-close"
-              aria-label="Закрыть модальное окно">Закрыть</button>
+              aria-label="Закрыть модальное окно">Закрыть
+      </button>
     </div>
   </div>
-  <div class="graph-modal__container graph-modal__container_custom" role="dialog" aria-modal="true" data-graph-target="error">
+  <div class="graph-modal__container graph-modal__container_custom"
+       role="dialog"
+       aria-modal="true"
+       data-graph-target="error">
     <div class="graph-modal__content">
       <div class="graph-modal__top space-md">
         <p class="heading-m">Ошибка!</p>
         <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно">
-          <svg class="icon-stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+          <svg class="icon-stroke"
+               xmlns="http://www.w3.org/2000/svg"
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none">
+            <path d="M20 4L4 20M20 20L4 4" stroke="#222222" stroke-width="2" stroke-linecap="round" />
           </svg>
         </button>
       </div>
 
-      <p class="space-xl">Произошла какая-то ошибка, форма не отправлена,  пожалуйста, попробуйте еще раз</p>
+      <p class="space-xl">Произошла какая-то ошибка, форма не отправлена, пожалуйста, попробуйте еще раз</p>
       <button class="text-l-bold button-filled text-dark js-modal-close"
-              aria-label="Закрыть модальное окно">Закрыть</button>
+              aria-label="Закрыть модальное окно">Закрыть
+      </button>
     </div>
   </div>
 </div>
 
-
-<script type="text/javascript" src="./js/libs/swiper/swiper-bundle.min.js" defer></script>
-<script type="text/javascript" src="./js/libs/fancybox/fancybox.umd.js" defer></script>
+<script type="text/javascript" src="./js/libs/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./js/libs/fancybox/fancybox.umd.js"></script>
 <script type="text/javascript" src="./js/libs/transfer-elements/transfer-elements.min.js" defer></script>
 <script type="text/javascript" src="./js/libs/graph-modal/graph-modal.min.js"></script>
 <script type="text/javascript" src="./js/libs/validate/validate-js.min.js"></script>
